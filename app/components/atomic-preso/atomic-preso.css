@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  color: red;
+}
+
+atomic-slide {
+    width: 100%;
+    height: 100%;
+}

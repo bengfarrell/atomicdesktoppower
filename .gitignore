@@ -1,0 +1,9 @@
+app/components/polymer
+app/components/core-*
+app/components/paper-*
+app/components/platform
+
+.idea
+_temp
+binaries
+node_modules

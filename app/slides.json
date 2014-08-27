@@ -1,0 +1,13 @@
+{
+    "slides": [
+        {
+            "background": "./images/batmobile.jpg",
+            "text": [
+                {
+                    "region": "header",
+                    "html": "Atomic Desktop Power <br /><small>with Node.js</small>"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../atomic-slide/atomic-slide.html">
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <atomic-preso></atomic-preso>
+
+@element atomic-preso
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://bengfarrell.github.io/atomic-preso
+-->
+<polymer-element name="atomic-preso" attributes="notitle">
+
+  <template>
+
+    <link rel="stylesheet" href="atomic-preso.css" />
+
+    <content>
+        <atomic-slide id="slideviewer"></atomic-slide>
+    </content>
+
+  </template>
+
+  <script>
+
+    Polymer('atomic-preso', {
+        /**
+        * slide index
+        *
+        * @property slideIndex
+        * @type int
+        */
+        slideIndex: -1,
+
+        /**
+         * slides
+         *
+         * @property slides
+         * @type array
+         */
+        slides: [],
+
+        ready: function() {
+            var fs = require('fs');
+            var slidesfile = fs.readFileSync('./app/slides.json');
+            this.slides = JSON.parse(slidesfile).slides;
+            this.nextSlide();
+        },
+
+        /**
+         * next slide
+         *
+         * @method next slide
+         * @return {int} index of slide
+         */
+        nextSlide: function(index) {
+            this.slideIndex ++;
+            if (this.slideIndex >= this.slides.length) {
+                return this.slides.length-1;
+            }
+            this.loadSlide(this.slideIndex);
+            return this.slideIndex;
+        },
+
+
+        /**
+         * previous slide
+         *
+         * @method previous slide
+         * @return {int} index of slide
+         */
+        previousSlide: function(index) {
+            this.slideIndex --;
+            if (this.slideIndex < 0) {
+                return 0;
+            }
+            this.loadSlide(this.slideIndex);
+            return this.slideIndex;
+        },
+
+        /**
+        * load a slide by index
+        *
+        * @method loadSlide
+        * @param {int} index of slide
+        */
+        loadSlide: function(index) {
+            this.$.slideviewer.clearText();
+            var sld = this.slides[index];
+            var self = this;
+            sld.text.forEach( function(item) {
+                self.$.slideviewer.setText(item.html, item.region);
+            });
+            this.$.slideviewer.setBackgroundImage(sld.background);
+        }
+
+    });
+
+  </script>
+
+</polymer-element>
