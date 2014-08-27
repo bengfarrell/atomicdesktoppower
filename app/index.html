@@ -10,6 +10,11 @@
     <script src="components/platform/platform.js"></script>
     <link rel="import" href="components/atomic-preso/atomic-preso.html">
 
+    <script>
+        document.onkeydown = function(event) {
+            document.getElementById('preso').nextSlide();
+        }
+    </script>
 
     <style shim-shadowdom>
         body {
@@ -29,7 +34,7 @@
 </head>
 
 <body unresolved touch-action="auto">
-    <atomic-preso></atomic-preso>
+    <atomic-preso id="preso"></atomic-preso>
 </body>
 
 </html>

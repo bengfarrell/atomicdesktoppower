@@ -5,7 +5,28 @@
             "text": [
                 {
                     "region": "header",
-                    "html": "Atomic Desktop Power <br /><small>with Node.js</small>"
+                    "html": "Atomic Desktop Power"
+                },
+
+                {
+                    "region": "footer",
+                    "html": "why html5 &amp node.js need a batmobile"
+                }
+            ]
+        },
+
+        {
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "html5 is awesome"
+                }
+            ],
+
+            "image": [
+                {
+                    "region": "center",
+                    "image": "./images/html5logo.png"
                 }
             ]
         }

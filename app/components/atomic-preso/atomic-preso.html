@@ -20,7 +20,7 @@ Element providing solution to no problem in particular.
     <link rel="stylesheet" href="atomic-preso.css" />
 
     <content>
-        <atomic-slide id="slideviewer"></atomic-slide>
+        <atomic-slide id="slideviewer" on-keypress="{{keypressHandler}}"></atomic-slide>
     </content>
 
   </template>
@@ -89,13 +89,25 @@ Element providing solution to no problem in particular.
         * @param {int} index of slide
         */
         loadSlide: function(index) {
-            this.$.slideviewer.clearText();
+            this.$.slideviewer.clear();
             var sld = this.slides[index];
             var self = this;
-            sld.text.forEach( function(item) {
-                self.$.slideviewer.setText(item.html, item.region);
-            });
-            this.$.slideviewer.setBackgroundImage(sld.background);
+
+            if (sld.text) {
+                sld.text.forEach( function(item) {
+                    self.$.slideviewer.setText(item.html, item.region);
+                });
+            }
+
+            if (sld.image) {
+                sld.image.forEach( function(item) {
+                    self.$.slideviewer.setImage(item.image, item.region);
+                });
+            }
+
+            if (sld.background) {
+                this.$.slideviewer.setBackgroundImage(sld.background);
+            }
         }
 
     });

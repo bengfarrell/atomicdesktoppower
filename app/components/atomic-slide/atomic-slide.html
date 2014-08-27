@@ -21,7 +21,10 @@ Element providing solution to no problem in particular.
 
     <content>
         <div id="background">
-            <div id="header" class="font-effect-3d"></div>
+            <div id="header_txt" class="txtregion font-effect-3d"></div>
+            <div id="footer_txt" class="txtregion"></div>
+
+            <div id="center_img" class="imgregion"></div>
         </div>
     </content>
 
@@ -36,7 +39,7 @@ Element providing solution to no problem in particular.
          * @property slides
          * @type array
          */
-        txtRegions: [ 'header' ],
+        txtRegions: [ 'header', 'footer' ],
 
         ready: function() {
         },
@@ -51,28 +54,58 @@ Element providing solution to no problem in particular.
             this.$.background.style.backgroundImage="url(" + img + ")";
         },
 
+        /**
+         * set image
+         *
+         * @method set image
+         * @param {String} img
+         * @param {String} named region
+         */
+        setImage: function(img, region ) {
+            this.$[region + '_img'].style.backgroundImage = "url(" + img + ")";
+        },
 
         /**
-        * The `task` method does no work at this time.
+        * set text
         *
         * @method set text
         * @param {String} text
         * @param {String} named region
         */
         setText: function(text, region ) {
-            this.$[region].innerHTML = text;
+            this.$[region + '_txt'].innerHTML = text;
         },
 
+
         /**
-         * The `task` method does no work at this time.
+         * clear slide
+         *
+         * @method clear
+         */
+         clear: function() {
+            this.clearBackgroundImage();
+            this.clearText();
+         },
+
+        /**
+         * clear text
          *
          * @method clear all text in regions
          */
         clearText: function() {
             var self = this;
             this.txtRegions.forEach( function(rg) {
-                self.$[rg].innerHTML = "";
+                self.$[rg + '_txt'].innerHTML = "";
             });
+        },
+
+        /**
+         * clear background image
+         *
+         * @method clear background image
+         */
+        clearBackgroundImage: function() {
+            this.$.background.style.backgroundImage = null;
         }
 
     });
