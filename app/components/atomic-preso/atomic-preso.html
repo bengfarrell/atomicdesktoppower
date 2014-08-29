@@ -20,7 +20,7 @@ Element providing solution to no problem in particular.
     <link rel="stylesheet" href="atomic-preso.css" />
 
     <content>
-        <atomic-slide id="slideviewer" on-keypress="{{keypressHandler}}"></atomic-slide>
+        <atomic-slide id="slideviewer"></atomic-slide>
     </content>
 
   </template>
@@ -44,11 +44,36 @@ Element providing solution to no problem in particular.
          */
         slides: [],
 
+        /**
+         * ready
+         *
+         * @method ready
+         */
         ready: function() {
+            this.loadDeck();
+            this.nextSlide();
+        },
+
+        /**
+         * load deck
+         *
+         * @method loadDeck
+         */
+        loadDeck: function() {
             var fs = require('fs');
             var slidesfile = fs.readFileSync('./app/slides.json');
             this.slides = JSON.parse(slidesfile).slides;
-            this.nextSlide();
+        },
+
+        /**
+         * reload deck
+         *
+         * @method reloadDeck
+         */
+        reloadDeck: function() {
+            console.log("Reload")
+            this.loadDeck();
+            this.loadSlide(this.slideIndex);
         },
 
         /**
@@ -65,7 +90,6 @@ Element providing solution to no problem in particular.
             this.loadSlide(this.slideIndex);
             return this.slideIndex;
         },
-
 
         /**
          * previous slide
@@ -99,8 +123,8 @@ Element providing solution to no problem in particular.
                 });
             }
 
-            if (sld.image) {
-                sld.image.forEach( function(item) {
+            if (sld.images) {
+                sld.images.forEach( function(item) {
                     self.$.slideviewer.setImage(item.image, item.region);
                 });
             }

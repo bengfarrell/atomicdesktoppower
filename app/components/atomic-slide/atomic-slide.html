@@ -23,6 +23,8 @@ Element providing solution to no problem in particular.
         <div id="background">
             <div id="header_txt" class="txtregion font-effect-3d"></div>
             <div id="footer_txt" class="txtregion"></div>
+            <div id="left_txt" class="txtregion"></div>
+            <div id="right_txt" class="txtregion"></div>
 
             <div id="center_img" class="imgregion"></div>
         </div>
@@ -39,7 +41,16 @@ Element providing solution to no problem in particular.
          * @property slides
          * @type array
          */
-        txtRegions: [ 'header', 'footer' ],
+        txtRegions: [ 'header', 'footer', 'left', 'right' ],
+
+
+        /**
+         * image regions
+         *
+         * @property slides
+         * @type array
+         */
+        imgRegions: [ 'center' ],
 
         ready: function() {
         },
@@ -85,6 +96,7 @@ Element providing solution to no problem in particular.
          clear: function() {
             this.clearBackgroundImage();
             this.clearText();
+            this.clearImages();
          },
 
         /**
@@ -96,6 +108,18 @@ Element providing solution to no problem in particular.
             var self = this;
             this.txtRegions.forEach( function(rg) {
                 self.$[rg + '_txt'].innerHTML = "";
+            });
+        },
+
+        /**
+         * clear images
+         *
+         * @method clear all images in regions
+         */
+        clearImages: function() {
+            var self = this;
+            this.imgRegions.forEach( function(rg) {
+                self.$[rg + '_img'].style.backgroundImage = null;
             });
         },
 

@@ -23,12 +23,150 @@
                 }
             ],
 
-            "image": [
+            "images": [
                 {
                     "region": "center",
                     "image": "./images/html5logo.png"
                 }
             ]
+        },
+
+        {
+            "text": [
+                {
+                    "region": "header",
+                    "html": "HTML5 has"
+                },
+                {
+                    "region": "footer",
+                    "html": "structure, power, and style"
+                }
+            ],
+
+            "images": [
+                {
+                    "region": "center",
+                    "image": "./images/htmljscss.png"
+                }
+            ]
+        },
+
+        {
+            "background": "./images/batmanisawesome.jpg",
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "Batman is awesome, too"
+                }
+            ]
+        },
+
+        {
+            "images": [
+                {
+                    "region": "center",
+                    "image": "http://placehold.it/350x150"
+                }
+            ],
+
+            "text": [
+                {
+                    "region": "header",
+                    "html": "Batman has"
+                },
+                {
+                    "region": "footer",
+                    "html": "structure, power, and style"
+                }
+            ]
+        },
+
+        {
+            "background": "./images/batmansparents.jpg",
+
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "every hero needs a good origin story"
+                }
+            ]
+        },
+
+        {
+            "background": "./images/batusi.gif",
+
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "...but sometimes these things can be too dark, and we prefer happier times"
+                }
+            ]
+        },
+
+        {
+            "background": "http://placehold.it/800x800",
+
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "Some might say that HTML5 has some dark origins, too."
+                }
+            ]
+        },
+
+        {
+            "background": "./images/icanhashtml5.jpg",
+
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "...but again, happy thoughts please."
+                }
+            ]
+        },
+
+        {
+            "background": "http://placehold.it/800x800",
+
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "HTML5 is spry and can handle itself in a fight"
+                },
+
+                {
+                    "region": "left",
+                    "html": "<ul><li>lists</li><li>divs</li><li>spans</li><li>CSS layout</li><li>JS Events</li><li>DOM Manipulation</li></ul>"
+                },
+
+
+                {
+                    "region": "right",
+                    "html": "<ul><li>SVG</li><li>Web Fonts</li><li>Mouse/Key Events</li><li>Debugging</li><li>AJAX</li><li>Prototypical Inheritance</li></ul>"
+                }
+            ]
+        },
+
+        {
+            "images": [
+                {
+                    "region": "center",
+                    "image": "./images/utilitybelt.jpg"
+                }
+            ],
+
+            "text": [
+                {
+                    "region": "header",
+                    "html": "The HTML5 Utility Belt"
+                },
+
+                {
+                    "region": "footer",
+                    "html": "sometimes, we need some additional tricks up our sleeve </br ><span>video&nbsp;&nbsp;&nbsp;&nbsp;audio&nbsp;&nbsp;&nbsp;&nbsp;microphone&nbsp;&nbsp;&nbsp;&nbsp;local storage&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webgl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css transform</span>"
+                }
+            ]
         }
+
     ]
 }

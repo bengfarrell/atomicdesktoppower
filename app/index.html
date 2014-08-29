@@ -12,7 +12,13 @@
 
     <script>
         document.onkeydown = function(event) {
-            document.getElementById('preso').nextSlide();
+            if (event.keyCode == 37) {
+                document.getElementById('preso').previousSlide();
+            } else if (event.keyCode == 39) {
+                document.getElementById('preso').nextSlide();
+            }  else if (String.fromCharCode(event.keyCode) == "C") {
+                document.getElementById('preso').reloadDeck();
+            }
         }
     </script>
 
