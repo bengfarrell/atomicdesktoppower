@@ -74,6 +74,7 @@ Element providing solution to no problem in particular.
          */
         setImage: function(img, region ) {
             this.$[region + '_img'].style.backgroundImage = "url(" + img + ")";
+            this.removeClass(this.$[region + '_img'], 'hidden');
         },
 
         /**
@@ -85,6 +86,7 @@ Element providing solution to no problem in particular.
         */
         setText: function(text, region ) {
             this.$[region + '_txt'].innerHTML = text;
+            this.removeClass(this.$[region + '_txt'], 'hidden');
         },
 
 
@@ -108,6 +110,7 @@ Element providing solution to no problem in particular.
             var self = this;
             this.txtRegions.forEach( function(rg) {
                 self.$[rg + '_txt'].innerHTML = "";
+                self.addClass(self.$[rg + '_txt'], 'hidden');
             });
         },
 
@@ -120,6 +123,7 @@ Element providing solution to no problem in particular.
             var self = this;
             this.imgRegions.forEach( function(rg) {
                 self.$[rg + '_img'].style.backgroundImage = null;
+                self.addClass(self.$[rg + '_img'], 'hidden');
             });
         },
 
@@ -130,7 +134,41 @@ Element providing solution to no problem in particular.
          */
         clearBackgroundImage: function() {
             this.$.background.style.backgroundImage = null;
+        },
+
+        /**
+         * add a class to an element
+         *
+         * @method addClass
+         * @param {object} element
+         * @param {string} class
+         */
+        addClass: function(elem, cls) {
+            var classes = elem.getAttribute('class');
+            var clist = classes.split(' ');
+            if (clist.indexOf(cls) < 0) {
+                clist.push(cls);
+                elem.setAttribute('class', clist.join(' '));
+            }
+        },
+
+        /**
+         * add a class to an element
+         *
+         * @method addClass
+         * @param {object} element
+         * @param {string} class
+         */
+        removeClass: function(elem, cls) {
+            var classes = elem.getAttribute('class');
+            var clist = classes.split(' ');
+            if (clist.indexOf(cls) >= 0) {
+                clist.splice(clist.indexOf(cls), 1)
+                elem.setAttribute('class', clist.join(' '));
+            }
         }
+
+
 
     });
 

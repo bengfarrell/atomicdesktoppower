@@ -20,6 +20,7 @@ Element providing solution to no problem in particular.
     <link rel="stylesheet" href="atomic-preso.css" />
 
     <content>
+        <span >{{slideIndex +1}} of {{slides.length}}</span> <span>{{wlanip}}</span>
         <atomic-slide id="slideviewer"></atomic-slide>
     </content>
 
@@ -45,6 +46,14 @@ Element providing solution to no problem in particular.
         slides: [],
 
         /**
+         * wlan IP
+         *
+         * @property ip address
+         * @type string
+         */
+        wlanip: "",
+
+        /**
          * ready
          *
          * @method ready
@@ -52,6 +61,10 @@ Element providing solution to no problem in particular.
         ready: function() {
             this.loadDeck();
             this.nextSlide();
+
+            var os = require( 'os' );
+            var networkInterfaces = os.networkInterfaces( );
+            this.wlanip = networkInterfaces.wlan0[0].address;
         },
 
         /**
@@ -71,7 +84,6 @@ Element providing solution to no problem in particular.
          * @method reloadDeck
          */
         reloadDeck: function() {
-            console.log("Reload")
             this.loadDeck();
             this.loadSlide(this.slideIndex);
         },

@@ -8,6 +8,10 @@
     color: #fff;
 }
 
+.hidden {
+    display: none;
+}
+
 #background {
     background: radial-gradient(ellipse at center, #fefcea 0%,#f1da36 100%);
     background-size:   cover;
