@@ -81,17 +81,64 @@
     {
       "text": [
         {
+          "region": "header",
+          "html": "The difference?"
+        },
+        {
           "region": "footer",
-          "html": "Package and distribute your own application, and target your dev efforts for one platform"
+          "html": "you're not locked into one (or many) browsers"
         }
       ],
       "images": [
         {
-          "region": "center_full",
-          "image": "http://placehold.it/350x150"
+          "region": "center",
+          "image": "browsers.png"
         }
       ],
       "number": 28
+    },
+    {
+      "background": "jokerpresent.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Package and distribute your own application, and target your dev efforts for one platform"
+        }
+      ],
+      "number": 29
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Think of it this way..."
+        },
+        {
+          "region": "footer",
+          "html": "Batman has to deal with many supervillians, just like you do…."
+        }
+      ],
+      "number": 30
+    },
+    {
+      "background": "villians.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "But when they gang up and you have to deal with them all..."
+        }
+      ],
+      "number": 31
+    },
+    {
+      "background": "batmancliffhanger.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "It’s usually at least a two-parter, with great peril"
+        }
+      ],
+      "number": 32
     }
   ]
 }
