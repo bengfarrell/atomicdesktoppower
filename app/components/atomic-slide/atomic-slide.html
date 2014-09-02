@@ -21,12 +21,12 @@ Element providing solution to no problem in particular.
 
     <content>
         <div id="background">
+            <div id="center_img" class="imgregion"></div>
+            <div id="center_full_img" class="imgregion_full"></div>
             <div id="header_txt" class="txtregion font-effect-3d"></div>
             <div id="footer_txt" class="txtregion"></div>
             <div id="left_txt" class="txtregion"></div>
             <div id="right_txt" class="txtregion"></div>
-
-            <div id="center_img" class="imgregion"></div>
         </div>
     </content>
 
@@ -50,7 +50,7 @@ Element providing solution to no problem in particular.
          * @property slides
          * @type array
          */
-        imgRegions: [ 'center' ],
+        imgRegions: [ 'center', 'center_full' ],
 
         /**
          * image base path

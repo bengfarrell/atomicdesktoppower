@@ -1,0 +1,97 @@
+{
+  "slides": [
+    {
+      "background": "atom-full.png",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Github's Atom Editor"
+        }
+      ],
+      "number": 23
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Under the hood..."
+        },
+        {
+          "region": "footer",
+          "html": "is powered by Atom-Shell"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "atom-logo.jpg"
+        }
+      ],
+      "number": 24
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "Atom-Shell is the Batmobile of HTML5"
+        },
+        {
+          "region": "header",
+          "html": "Atomic Desktop<br/> Power!"
+        }
+      ],
+      "images": [
+        {
+          "region": "center_full",
+          "image": "batmanstandingonbatmobile.jpg"
+        }
+      ],
+      "number": 25
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Batman &amp Friends<br />have a sweet ride"
+        }
+      ],
+      "images": [
+        {
+          "region": "center_full",
+          "image": "adam-west-batmobile-with-batgirl.jpg"
+        }
+      ],
+      "number": 26
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "As always, load up Webkit with your preferred stack..."
+        }
+      ],
+      "images": [
+        {
+          "region": "center_full",
+          "image": "http://placehold.it/350x150"
+        }
+      ],
+      "number": 27
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "Package and distribute your own application, and target your dev efforts for one platform"
+        }
+      ],
+      "images": [
+        {
+          "region": "center_full",
+          "image": "http://placehold.it/350x150"
+        }
+      ],
+      "number": 28
+    }
+  ]
+}

@@ -118,7 +118,21 @@
       "number": 9
     },
     {
-      "background": "http://placehold.it/800x800",
+      "background": "unmask.jpg",
+      "text": [
+        {
+          "region": "header",
+          "html": "Unmasking HTML5"
+        },
+        {
+          "region": "footer",
+          "html": "just a buzzword - we say HTML5 when we mean modern HTML/CSS/JS"
+        }
+      ],
+      "number": 10
+    },
+    {
+      "background": "batmanpow.jpg",
       "text": [
         {
           "region": "footer",
@@ -133,12 +147,12 @@
           "html": "<ul><li>SVG</li><li>Web Fonts</li><li>Mouse/Key Events</li><li>Debugging</li><li>AJAX</li><li>Prototypical Inheritance</li></ul>"
         }
       ],
-      "number": 10
+      "number": 11
     },
     {
       "images": [
         {
-          "region": "center",
+          "region": "center_full",
           "image": "utilitybelt.jpg"
         }
       ],
@@ -152,7 +166,7 @@
           "html": "sometimes, we need some additional tricks up our sleeve </br ><span>video&nbsp;&nbsp;&nbsp;&nbsp;audio&nbsp;&nbsp;&nbsp;&nbsp;microphone&nbsp;&nbsp;&nbsp;&nbsp;local storage&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webgl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css transform</span>"
         }
       ],
-      "number": 11
+      "number": 12
     },
     {
       "text": [
@@ -165,7 +179,7 @@
           "html": "And who can say no to workflow improvements with the help of some friends?"
         }
       ],
-      "number": 12
+      "number": 13
     },
     {
       "text": [
@@ -178,7 +192,7 @@
           "html": "<p>Batman can fight crime with gadgets, sick dance moves, and friends.</p><p>But how does he actually SOLVE crimes?</p><p>There’s another piece to this ecosystem...</p>"
         }
       ],
-      "number": 13
+      "number": 14
     }
   ]
 }

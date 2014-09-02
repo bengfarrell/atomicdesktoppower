@@ -8,7 +8,7 @@
           "html": "The Bat Computer. Ask a question, get a response. How does it work? Nobody knows."
         }
       ],
-      "number": 14
+      "number": 15
     },
     {
       "text": [
@@ -23,7 +23,7 @@
           "image": "nodejslogo.png"
         }
       ],
-      "number": 15
+      "number": 16
     },
     {
       "text": [
@@ -36,7 +36,7 @@
           "html": "<ul><li>Local Filesystem access</li><li>A webserver</li><li>C++ Add-on capabilities</li><li>socket server</li><li>robots</li><li>bluetooth</li></ul>"
         }
       ],
-      "number": 16
+      "number": 17
     },
     {
       "text": [
@@ -45,7 +45,7 @@
           "html": "Node.js (or any backend) is perfect when in the Batcave and connectivity is a sure thing"
         }
       ],
-      "number": 17
+      "number": 18
     },
     {
       "background": "running.jpg",
@@ -55,7 +55,7 @@
           "html": "But sometimes, we have to run outside and the internet might not be available"
         }
       ],
-      "number": 18
+      "number": 19
     },
     {
       "text": [
@@ -64,7 +64,7 @@
           "html": "you probably see where I'm going with this"
         }
       ],
-      "number": 19
+      "number": 20
     },
     {
       "text": [
@@ -73,7 +73,7 @@
           "html": "Atomic batteries to power, turbines to speed"
         }
       ],
-      "number": 20
+      "number": 21
     },
     {
       "text": [
@@ -82,7 +82,7 @@
           "html": "ready to move out"
         }
       ],
-      "number": 21
+      "number": 22
     }
   ]
 }
