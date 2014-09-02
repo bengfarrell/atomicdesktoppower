@@ -1,0 +1,6 @@
+{
+    "baseImagePath": "./slides/images",
+    "content": [
+        { "name": "intro", "file": "decks/intro.json" }
+    ]
+}

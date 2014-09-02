@@ -52,6 +52,14 @@ Element providing solution to no problem in particular.
          */
         imgRegions: [ 'center' ],
 
+        /**
+         * image base path
+         *
+         * @property imgpath
+         * @type string
+         */
+        imgpath: "",
+
         ready: function() {
         },
 
@@ -62,7 +70,7 @@ Element providing solution to no problem in particular.
         * @param {String} img
         */
         setBackgroundImage: function(img) {
-            this.$.background.style.backgroundImage="url(" + img + ")";
+            this.$.background.style.backgroundImage="url(" + this.resolveImage(img, this.imgpath) + ")";
         },
 
         /**
@@ -73,7 +81,7 @@ Element providing solution to no problem in particular.
          * @param {String} named region
          */
         setImage: function(img, region ) {
-            this.$[region + '_img'].style.backgroundImage = "url(" + img + ")";
+            this.$[region + '_img'].style.backgroundImage = "url(" + this.resolveImage(img, this.imgpath) + ")";
             this.removeClass(this.$[region + '_img'], 'hidden');
         },
 
@@ -166,6 +174,24 @@ Element providing solution to no problem in particular.
                 clist.splice(clist.indexOf(cls), 1)
                 elem.setAttribute('class', clist.join(' '));
             }
+        },
+
+        /**
+         * resolve an image
+         *
+         * @method resolve image
+         * @param {string} img
+         * @param {string} base path
+         */
+        resolveImage: function(img, base) {
+            if (img.substr(0, 4) == "http") {
+                return img;
+            }
+            if (img.substr(0, 4) == "file") {
+                return img;
+            }
+
+            return base + "/" + img;
         }
     });
 

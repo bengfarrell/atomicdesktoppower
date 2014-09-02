@@ -1,7 +1,7 @@
 {
     "slides": [
         {
-            "background": "./images/batmobile.jpg",
+            "background": "batmobile.jpg",
             "text": [
                 {
                     "region": "header",
@@ -26,7 +26,7 @@
             "images": [
                 {
                     "region": "center",
-                    "image": "./images/html5logo.png"
+                    "image": "html5logo.png"
                 }
             ]
         },
@@ -46,13 +46,13 @@
             "images": [
                 {
                     "region": "center",
-                    "image": "./images/htmljscss.png"
+                    "image": "htmljscss.png"
                 }
             ]
         },
 
         {
-            "background": "./images/batmanisawesome.jpg",
+            "background": "batmanisawesome.jpg",
             "text": [
                 {
                     "region": "footer",
@@ -82,7 +82,7 @@
         },
 
         {
-            "background": "./images/batmansparents.jpg",
+            "background": "batmansparents.jpg",
 
             "text": [
                 {
@@ -93,7 +93,7 @@
         },
 
         {
-            "background": "./images/batusi.gif",
+            "background": "batusi.gif",
 
             "text": [
                 {
@@ -115,7 +115,7 @@
         },
 
         {
-            "background": "./images/icanhashtml5.jpg",
+            "background": "icanhashtml5.jpg",
 
             "text": [
                 {
@@ -151,7 +151,7 @@
             "images": [
                 {
                     "region": "center",
-                    "image": "./images/utilitybelt.jpg"
+                    "image": "utilitybelt.jpg"
                 }
             ],
 
@@ -166,7 +166,36 @@
                     "html": "sometimes, we need some additional tricks up our sleeve </br ><span>video&nbsp;&nbsp;&nbsp;&nbsp;audio&nbsp;&nbsp;&nbsp;&nbsp;microphone&nbsp;&nbsp;&nbsp;&nbsp;local storage&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webgl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css transform</span>"
                 }
             ]
+        },
+
+        {
+            "text": [
+                {
+                    "region": "header",
+                    "html": "Batman & Friends"
+                },
+
+                {
+                    "region": "footer",
+                    "html": "And who can say no to workflow improvements with the help of some friends?"
+                }
+            ]
+        },
+
+        {
+            "text": [
+                {
+                    "region": "header",
+                    "html": "Riddle me this..."
+                },
+
+                {
+                    "region": "footer",
+                    "html": "<p>Batman can fight crime with gadgets, sick dance moves, and friends.</p><p>But how does he actually SOLVE crimes?</p><p>There’s another piece to this ecosystem...</p>"
+                }
+            ]
         }
+
 
     ]
 }

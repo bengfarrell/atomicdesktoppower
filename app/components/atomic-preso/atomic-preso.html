@@ -73,9 +73,21 @@ Element providing solution to no problem in particular.
          * @method loadDeck
          */
         loadDeck: function() {
+            var self = this;
+            this.slides = [];
             var fs = require('fs');
-            var slidesfile = fs.readFileSync('./app/slides.json');
-            this.slides = JSON.parse(slidesfile).slides;
+            var manifest = JSON.parse(fs.readFileSync('./app/slides/manifest.json'));
+            manifest.content.forEach( function(deck) {
+                try {
+                    var slds = JSON.parse(fs.readFileSync('./app/slides/' + deck.file));
+                    self.slides = self.slides.concat(self.slides,  slds.slides )
+                } catch(e) {
+                    console.log('JSON Parsing error for ./app/slides/' + deck.file);
+                    console.log(e.message);
+                }
+            });
+
+            this.$.slideviewer.imgpath = manifest.baseImagePath;
         },
 
         /**
