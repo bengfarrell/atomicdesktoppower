@@ -24,6 +24,65 @@
         }
       ],
       "number": 15
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Node.js offers some power that HTML5 just doesn’t have"
+        },
+        {
+          "region": "left",
+          "html": "<ul><li>Local Filesystem access</li><li>A webserver</li><li>C++ Add-on capabilities</li><li>socket server</li><li>robots</li><li>bluetooth</li></ul>"
+        }
+      ],
+      "number": 16
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "Node.js (or any backend) is perfect when in the Batcave and connectivity is a sure thing"
+        }
+      ],
+      "number": 17
+    },
+    {
+      "background": "running.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "But sometimes, we have to run outside and the internet might not be available"
+        }
+      ],
+      "number": 18
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "you probably see where I'm going with this"
+        }
+      ],
+      "number": 19
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "Atomic batteries to power, turbines to speed"
+        }
+      ],
+      "number": 20
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "ready to move out"
+        }
+      ],
+      "number": 21
     }
   ]
 }
