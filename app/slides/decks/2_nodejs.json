@@ -1,0 +1,13 @@
+{
+    "slides": [
+        {
+            "background": "http://placehold.it/350x150",
+            "text": [
+                {
+                    "region": "footer",
+                    "html": "The Bat Computer. Ask a question, get a response. How does it work? Nobody knows."
+                }
+            ]
+        }
+    ]
+}

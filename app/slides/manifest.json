@@ -1,6 +1,7 @@
 {
     "baseImagePath": "./slides/images",
     "content": [
-        { "name": "intro", "file": "decks/intro.json" }
+        { "name": "intro", "file": "decks/1_intro.json" },
+        { "name": "nodejs", "file": "decks/2_nodejs.json" }
     ]
 }

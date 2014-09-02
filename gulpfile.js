@@ -10,11 +10,11 @@ gulp.task('downloadatomshell', function(cb){
 });
 
 gulp.task('demo', shell.task([
-    'binaries/atom app true'
+    'binaries/atom app debug:true slide:' + gulp.env.slide
 ]));
 
 gulp.task('democ', shell.task([
-    'binaries/atom app true components/' + gulp.env.comp + '/demo.html'
+    'binaries/atom app debug:false html:components/' + gulp.env.comp + '/demo.html'
 ]));
 
 gulp.task('default', ['downloadatomshell']);

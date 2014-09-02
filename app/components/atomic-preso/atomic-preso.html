@@ -35,7 +35,7 @@ Element providing solution to no problem in particular.
         * @property slideIndex
         * @type int
         */
-        slideIndex: -1,
+        slideIndex: 0,
 
         /**
          * slides
@@ -59,8 +59,9 @@ Element providing solution to no problem in particular.
          * @method ready
          */
         ready: function() {
+            var remote = require('remote');
             this.loadDeck();
-            this.nextSlide();
+            this.loadSlide(remote.getGlobal('config').slide -1);
 
             var os = require( 'os' );
             var networkInterfaces = os.networkInterfaces( );
@@ -137,6 +138,7 @@ Element providing solution to no problem in particular.
         * @param {int} index of slide
         */
         loadSlide: function(index) {
+            this.slideIndex = index;
             this.$.slideviewer.clear();
             var sld = this.slides[index];
             var self = this;

@@ -17,26 +17,36 @@ app.on('window-all-closed', function() {
 // This method will be called when atom-shell has done everything
 // initialization and ready for creating browser windows.
 app.on('ready', function() {
+
     // Create the browser window.
     mainWindow = new BrowserWindow({width: 1200, height: 800});
 
-    // and load the index.html of the app.
-
-    var startpage = 'index.html';
-    var devmode = false;
-
-    if (process.argv.length >= 4) {
-        console.log(process.argv[3]);
-        startpage = process.argv[3];
+    global['config'] = {
+        html: 'index.html',
+        debug: false,
+        slide: 1
     }
 
-    if (process.argv.length >= 3 ) {
-        devmode = Boolean(process.argv[2]);
+    process.argv.forEach(function(arg) {
+        var key = arg.split(':')[0];
+        var value = arg.split(':')[1];
+
+        if (value != "undefined" && value != undefined && value) {
+            global['config'][key] = value;
+            console.log("Setting config." + key + " to " + value);
+        }
+    });
+
+    // type co-erce
+    if (global['config'].debug == "true") {
+        global['config'].debug = true;
+    } else {
+        global['config'].debug = false;
     }
 
-    mainWindow.loadUrl('file://' + __dirname + '/' + startpage );
+    mainWindow.loadUrl('file://' + __dirname + '/' + global['config'].html );
 
-    if (devmode) {
+    if (global['config'].debug) {
         mainWindow.openDevTools();
     }
 
