@@ -1,201 +1,184 @@
 {
-    "slides": [
+  "slides": [
+    {
+      "background": "batmobile.jpg",
+      "text": [
         {
-            "background": "batmobile.jpg",
-            "text": [
-                {
-                    "region": "header",
-                    "html": "Atomic Desktop Power"
-                },
-
-                {
-                    "region": "footer",
-                    "html": "why html5 &amp node.js need a batmobile"
-                }
-            ]
+          "region": "header",
+          "html": "Atomic Desktop Power"
         },
-
         {
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "html5 is awesome"
-                }
-            ],
-
-            "images": [
-                {
-                    "region": "center",
-                    "image": "html5logo.png"
-                }
-            ]
-        },
-
-        {
-            "text": [
-                {
-                    "region": "header",
-                    "html": "HTML5 has"
-                },
-                {
-                    "region": "footer",
-                    "html": "structure, power, and style"
-                }
-            ],
-
-            "images": [
-                {
-                    "region": "center",
-                    "image": "htmljscss.png"
-                }
-            ]
-        },
-
-        {
-            "background": "batmanisawesome.jpg",
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "Batman is awesome, too"
-                }
-            ]
-        },
-
-        {
-            "images": [
-                {
-                    "region": "center",
-                    "image": "http://placehold.it/350x150"
-                }
-            ],
-
-            "text": [
-                {
-                    "region": "header",
-                    "html": "Batman has"
-                },
-                {
-                    "region": "footer",
-                    "html": "structure, power, and style"
-                }
-            ]
-        },
-
-        {
-            "background": "batmansparents.jpg",
-
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "every hero needs a good origin story"
-                }
-            ]
-        },
-
-        {
-            "background": "batusi.gif",
-
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "...but sometimes these things can be too dark, and we prefer happier times"
-                }
-            ]
-        },
-
-        {
-            "background": "http://placehold.it/800x800",
-
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "Some might say that HTML5 has some dark origins, too."
-                }
-            ]
-        },
-
-        {
-            "background": "icanhashtml5.jpg",
-
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "...but again, happy thoughts please."
-                }
-            ]
-        },
-
-        {
-            "background": "http://placehold.it/800x800",
-
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "HTML5 is spry and can handle itself in a fight"
-                },
-
-                {
-                    "region": "left",
-                    "html": "<ul><li>lists</li><li>divs</li><li>spans</li><li>CSS layout</li><li>JS Events</li><li>DOM Manipulation</li></ul>"
-                },
-
-
-                {
-                    "region": "right",
-                    "html": "<ul><li>SVG</li><li>Web Fonts</li><li>Mouse/Key Events</li><li>Debugging</li><li>AJAX</li><li>Prototypical Inheritance</li></ul>"
-                }
-            ]
-        },
-
-        {
-            "images": [
-                {
-                    "region": "center",
-                    "image": "utilitybelt.jpg"
-                }
-            ],
-
-            "text": [
-                {
-                    "region": "header",
-                    "html": "The HTML5 Utility Belt"
-                },
-
-                {
-                    "region": "footer",
-                    "html": "sometimes, we need some additional tricks up our sleeve </br ><span>video&nbsp;&nbsp;&nbsp;&nbsp;audio&nbsp;&nbsp;&nbsp;&nbsp;microphone&nbsp;&nbsp;&nbsp;&nbsp;local storage&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webgl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css transform</span>"
-                }
-            ]
-        },
-
-        {
-            "text": [
-                {
-                    "region": "header",
-                    "html": "Batman & Friends"
-                },
-
-                {
-                    "region": "footer",
-                    "html": "And who can say no to workflow improvements with the help of some friends?"
-                }
-            ]
-        },
-
-        {
-            "text": [
-                {
-                    "region": "header",
-                    "html": "Riddle me this..."
-                },
-
-                {
-                    "region": "footer",
-                    "html": "<p>Batman can fight crime with gadgets, sick dance moves, and friends.</p><p>But how does he actually SOLVE crimes?</p><p>There’s another piece to this ecosystem...</p>"
-                }
-            ]
+          "region": "footer",
+          "html": "why html5 &amp node.js need a batmobile"
         }
-
-
-    ]
+      ],
+      "number": 1
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "html5 is awesome"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "html5logo.png"
+        }
+      ],
+      "number": 2
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "HTML5 has"
+        },
+        {
+          "region": "footer",
+          "html": "structure, power, and style"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "htmljscss.png"
+        }
+      ],
+      "number": 3
+    },
+    {
+      "background": "batmanisawesome.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Batman is awesome, too"
+        }
+      ],
+      "number": 4
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "http://placehold.it/350x150"
+        }
+      ],
+      "text": [
+        {
+          "region": "header",
+          "html": "Batman has"
+        },
+        {
+          "region": "footer",
+          "html": "structure, power, and style"
+        }
+      ],
+      "number": 5
+    },
+    {
+      "background": "batmansparents.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "every hero needs a good origin story"
+        }
+      ],
+      "number": 6
+    },
+    {
+      "background": "batusi.gif",
+      "text": [
+        {
+          "region": "footer",
+          "html": "...but sometimes these things can be too dark, and we prefer happier times"
+        }
+      ],
+      "number": 7
+    },
+    {
+      "background": "http://placehold.it/800x800",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Some might say that HTML5 has some dark origins, too."
+        }
+      ],
+      "number": 8
+    },
+    {
+      "background": "icanhashtml5.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "...but again, happy thoughts please."
+        }
+      ],
+      "number": 9
+    },
+    {
+      "background": "http://placehold.it/800x800",
+      "text": [
+        {
+          "region": "footer",
+          "html": "HTML5 is spry and can handle itself in a fight"
+        },
+        {
+          "region": "left",
+          "html": "<ul><li>lists</li><li>divs</li><li>spans</li><li>CSS layout</li><li>JS Events</li><li>DOM Manipulation</li></ul>"
+        },
+        {
+          "region": "right",
+          "html": "<ul><li>SVG</li><li>Web Fonts</li><li>Mouse/Key Events</li><li>Debugging</li><li>AJAX</li><li>Prototypical Inheritance</li></ul>"
+        }
+      ],
+      "number": 10
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "utilitybelt.jpg"
+        }
+      ],
+      "text": [
+        {
+          "region": "header",
+          "html": "The HTML5 Utility Belt"
+        },
+        {
+          "region": "footer",
+          "html": "sometimes, we need some additional tricks up our sleeve </br ><span>video&nbsp;&nbsp;&nbsp;&nbsp;audio&nbsp;&nbsp;&nbsp;&nbsp;microphone&nbsp;&nbsp;&nbsp;&nbsp;local storage&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webgl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css transform</span>"
+        }
+      ],
+      "number": 11
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Batman & Friends"
+        },
+        {
+          "region": "footer",
+          "html": "And who can say no to workflow improvements with the help of some friends?"
+        }
+      ],
+      "number": 12
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Riddle me this..."
+        },
+        {
+          "region": "footer",
+          "html": "<p>Batman can fight crime with gadgets, sick dance moves, and friends.</p><p>But how does he actually SOLVE crimes?</p><p>There’s another piece to this ecosystem...</p>"
+        }
+      ],
+      "number": 13
+    }
+  ]
 }

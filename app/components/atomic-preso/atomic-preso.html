@@ -81,7 +81,7 @@ Element providing solution to no problem in particular.
             manifest.content.forEach( function(deck) {
                 try {
                     var slds = JSON.parse(fs.readFileSync('./app/slides/' + deck.file));
-                    self.slides = self.slides.concat(self.slides,  slds.slides )
+                    self.slides = self.slides.concat(slds.slides )
                 } catch(e) {
                     console.log('JSON Parsing error for ./app/slides/' + deck.file);
                     console.log(e.message);
@@ -108,10 +108,10 @@ Element providing solution to no problem in particular.
          * @return {int} index of slide
          */
         nextSlide: function(index) {
-            this.slideIndex ++;
-            if (this.slideIndex >= this.slides.length) {
+            if (this.slideIndex +1 >= this.slides.length) {
                 return this.slides.length-1;
             }
+            this.slideIndex ++;
             this.loadSlide(this.slideIndex);
             return this.slideIndex;
         },
@@ -123,10 +123,11 @@ Element providing solution to no problem in particular.
          * @return {int} index of slide
          */
         previousSlide: function(index) {
-            this.slideIndex --;
-            if (this.slideIndex < 0) {
+            if (this.slideIndex -1 < 0) {
                 return 0;
             }
+
+            this.slideIndex --;
             this.loadSlide(this.slideIndex);
             return this.slideIndex;
         },

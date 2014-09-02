@@ -1,29 +1,29 @@
 {
-    "slides": [
+  "slides": [
+    {
+      "background": "http://placehold.it/350x150",
+      "text": [
         {
-            "background": "http://placehold.it/350x150",
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "The Bat Computer. Ask a question, get a response. How does it work? Nobody knows."
-                }
-            ]
-        },
-
-        {
-            "text": [
-                {
-                    "region": "footer",
-                    "html": "Sound familiar?"
-                }
-            ],
-
-            "images": [
-                {
-                    "region": "center",
-                    "image": "nodejslogo.png"
-                }
-            ]
+          "region": "footer",
+          "html": "The Bat Computer. Ask a question, get a response. How does it work? Nobody knows."
         }
-    ]
+      ],
+      "number": 14
+    },
+    {
+      "text": [
+        {
+          "region": "footer",
+          "html": "Sound familiar?"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "nodejslogo.png"
+        }
+      ],
+      "number": 15
+    }
+  ]
 }
