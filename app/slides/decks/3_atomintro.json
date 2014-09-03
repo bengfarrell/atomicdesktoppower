@@ -135,10 +135,43 @@
       "text": [
         {
           "region": "footer",
-          "html": "It’s usually at least a two-parter, with great peril"
+          "html": "<p>It’s usually at least a two-parter, with great peril</p><small>(just like your dev timeline)</small>"
         }
       ],
       "number": 32
-    }
+    },
+      {
+          "background": "nodejslogobig.png",
+          "text": [
+              {
+                  "region": "footer",
+                  "html": "A simple environment for packaging HTML5 apps is great, but where's the Bat Computer?"
+              }
+          ],
+          "number": 32
+      },
+
+      {
+          "background": "mobilecrime.jpg",
+          "text": [
+              {
+                  "region": "footer",
+                  "html": "just check the trunk!"
+              }
+          ],
+          "number": 32
+      },
+
+      {
+          "text": [
+              {
+                  "region": "footer",
+                  "html": "note: make an image: atom = webkit + node"
+              }
+          ],
+          "number": 32
+      }
+
+
   ]
 }
