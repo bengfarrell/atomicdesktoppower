@@ -1,0 +1,126 @@
+{
+  "slides": [
+    {
+      "background": "adam-west-batman.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "How does it work?"
+        }
+      ],
+      "number": 36
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "nodemainjs.jpg"
+        }
+      ],
+      "text": [
+        {
+          "region": "footer",
+          "html": "Normal Node apps start via command line"
+        }
+      ],
+      "number": 37
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "atomshelllauncher.jpg"
+        }
+      ],
+      "text": [
+        {
+          "region": "footer",
+          "html": "Atom-shell apps can start the same way (for devs)"
+        }
+      ],
+      "number": 38
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "gulp.png"
+        }
+      ],
+      "text": [
+        {
+          "region": "footer",
+          "html": "But, let’s start easy"
+        }
+      ],
+      "number": 39
+    },
+    {
+      "background": "gulpdownloadtask.png",
+      "text": [
+        {
+          "region": "footer",
+          "html": "npm install gulp-download-atom-shell"
+        }
+      ],
+      "number": 40
+    },
+    {
+      "background": "batmanwtf.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Amazing! There’s a task to just download it?"
+        }
+      ],
+      "number": 41
+    },
+    {
+      "background": "brucewayne.png",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Let's think about how to launch our project...",
+          "notes": "npm install gulp-shell var shell = require('gulp-shell'); gulp.task('demo', shell.task(['binaries/atom myprojectfolder ']));"
+        }
+      ],
+      "number": 42
+    },
+    {
+      "background": "whatarewelaunching.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "Holy Javascript Batman! But, what are we launching?"
+        }
+      ],
+      "number": 43
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "projectstructure.png"
+        }
+      ],
+      "text": [
+        {
+          "region": "footer",
+          "html": "",
+          "note": "info about project being inside app directory, note that it's the first arg of the launcher"
+        }
+      ],
+      "number": 44
+    },
+    {
+      "background": "batcaveentrance.jpg",
+      "text": [
+        {
+          "region": "footer",
+          "html": "So, where's the entry point?"
+        }
+      ],
+      "number": 45
+    }
+  ]
+}
