@@ -28,7 +28,7 @@ gulp.task('numberslides', function() {
 });
 
 gulp.task('demo', shell.task([
-    'binaries/atom app debug:true slide:' + gulp.env.slide
+        'binaries\\atom.exe app debug:true slide:' + gulp.env.slide
 ]));
 
 gulp.task('democ', shell.task([

@@ -59,12 +59,7 @@
       "number": 4
     },
     {
-      "images": [
-        {
-          "region": "center",
-          "image": "http://placehold.it/350x150"
-        }
-      ],
+      "background": "stylestructurepower.jpg",
       "text": [
         {
           "region": "header",
@@ -98,7 +93,7 @@
       "number": 7
     },
     {
-      "background": "http://placehold.it/800x800",
+      "background": "flashjavaarebatmansparents.png",
       "text": [
         {
           "region": "footer",
@@ -169,6 +164,8 @@
       "number": 12
     },
     {
+      "background": "friends.jpg",
+      "backgroundProperties": { "bounds": "auto" },
       "text": [
         {
           "region": "header",
@@ -182,6 +179,7 @@
       "number": 13
     },
     {
+      "background": "riddler.png",
       "text": [
         {
           "region": "header",

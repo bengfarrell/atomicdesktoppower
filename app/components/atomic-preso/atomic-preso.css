@@ -1,9 +1,6 @@
-:host {
-  display: block;
-  color: red;
-}
-
 atomic-slide {
     width: 100%;
     height: 100%;
+    background: radial-gradient(ellipse at center, #fefcea 0%,#f1da36 100%);
+    position: absolute;
 }

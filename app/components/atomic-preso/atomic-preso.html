@@ -65,7 +65,7 @@ Element providing solution to no problem in particular.
 
             var os = require( 'os' );
             var networkInterfaces = os.networkInterfaces( );
-            this.wlanip = networkInterfaces.wlan0[0].address;
+            //this.wlanip = networkInterfaces.wlan0[0].address;
         },
 
         /**
@@ -157,7 +157,7 @@ Element providing solution to no problem in particular.
             }
 
             if (sld.background) {
-                this.$.slideviewer.setBackgroundImage(sld.background);
+                this.$.slideviewer.setBackgroundImage(sld.background, sld.backgroundProperties);
             }
         }
 

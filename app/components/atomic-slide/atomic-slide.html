@@ -68,8 +68,13 @@ Element providing solution to no problem in particular.
         *
         * @method set background image
         * @param {String} img
+        * @param {object} background properties
         */
-        setBackgroundImage: function(img) {
+        setBackgroundImage: function(img, props) {
+            if (!props) { props = {}; }
+            if (!props.bounds) { props.bounds = "contain"; }
+
+            this.$.background.style["background-size"] = props.bounds;
             this.$.background.style.backgroundImage="url(" + this.resolveImage(img, this.imgpath) + ")";
         },
 

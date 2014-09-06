@@ -1,7 +1,7 @@
 {
   "slides": [
     {
-      "background": "http://placehold.it/350x150",
+      "background": "batcomputer.jpg",
       "text": [
         {
           "region": "footer",
@@ -26,6 +26,8 @@
       "number": 16
     },
     {
+      "background": "speedometer.png",
+      "backgroundProperties": { "bounds": "cover" },
       "text": [
         {
           "region": "header",
@@ -39,6 +41,7 @@
       "number": 17
     },
     {
+      "background": "wheninthebatcave.jpg",
       "text": [
         {
           "region": "footer",
@@ -58,6 +61,7 @@
       "number": 19
     },
     {
+      "background": "towardsthebatmobile.jpg",
       "text": [
         {
           "region": "footer",
@@ -67,6 +71,7 @@
       "number": 20
     },
     {
+      "background": "seatbelts.jpg",
       "text": [
         {
           "region": "footer",
@@ -76,6 +81,7 @@
       "number": 21
     },
     {
+      "background": "batexhaust.jpg",
       "text": [
         {
           "region": "footer",
@@ -83,6 +89,25 @@
         }
       ],
       "number": 22
-    }
+    },
+      {
+          "text": [
+              {
+                  "region": "footer",
+                  "html": "Atom-Shell is the Batmobile of HTML5"
+              },
+              {
+                  "region": "header",
+                  "html": "Atomic Desktop<br/> Power!"
+              }
+          ],
+          "images": [
+              {
+                  "region": "center_full",
+                  "image": "batmanstandingonbatmobile.jpg"
+              }
+          ],
+          "number": 25
+      }
   ]
 }

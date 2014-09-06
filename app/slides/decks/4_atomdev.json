@@ -66,13 +66,7 @@
       "number": 40
     },
     {
-      "background": "batmanwtf.jpg",
-      "text": [
-        {
-          "region": "footer",
-          "html": "Amazing! There’s a task to just download it?"
-        }
-      ],
+      "background": "batmanwtf.png",
       "number": 41
     },
     {
@@ -80,8 +74,7 @@
       "text": [
         {
           "region": "footer",
-          "html": "Let's think about how to launch our project...",
-          "notes": "npm install gulp-shell var shell = require('gulp-shell'); gulp.task('demo', shell.task(['binaries/atom myprojectfolder ']));"
+          "html": "Let's think about how to launch our project..."
         }
       ],
       "number": 42

@@ -1,5 +1,15 @@
 {
   "slides": [
+      {
+          "background": "alfredsetup.jpg",
+          "images": [
+              {
+                  "region": "center",
+                  "image": "atomequals.png"
+              }
+          ],
+          "number": 35
+      },
     {
       "background": "atom-full.png",
       "text": [
@@ -11,6 +21,8 @@
       "number": 23
     },
     {
+      "background": "underthehood.png",
+      "backgroundProperties": { "bound": "cover" },
       "text": [
         {
           "region": "header",
@@ -18,40 +30,19 @@
         },
         {
           "region": "footer",
-          "html": "is powered by Atom-Shell"
-        }
-      ],
-      "images": [
-        {
-          "region": "center",
-          "image": "atom-logo.jpg"
+          "html": "Atom is powered by Atom-Shell"
         }
       ],
       "number": 24
     },
     {
       "text": [
+          {
+              "region": "header",
+              "html": "With Atom-Shell..."
+          },
         {
           "region": "footer",
-          "html": "Atom-Shell is the Batmobile of HTML5"
-        },
-        {
-          "region": "header",
-          "html": "Atomic Desktop<br/> Power!"
-        }
-      ],
-      "images": [
-        {
-          "region": "center_full",
-          "image": "batmanstandingonbatmobile.jpg"
-        }
-      ],
-      "number": 25
-    },
-    {
-      "text": [
-        {
-          "region": "header",
           "html": "Batman &amp Friends<br />have a sweet ride"
         }
       ],
@@ -64,16 +55,11 @@
       "number": 26
     },
     {
+      "background": "loadupwebkit.png",
       "text": [
         {
-          "region": "footer",
+          "region": "header",
           "html": "As always, load up Webkit with your preferred stack..."
-        }
-      ],
-      "images": [
-        {
-          "region": "center_full",
-          "image": "http://placehold.it/350x150"
         }
       ],
       "number": 27
@@ -98,16 +84,18 @@
       "number": 28
     },
     {
-      "background": "jokerpresent.jpg",
+      "background": "packageupyourhtml5.png",
+        "backgroundProperties": { "bounds": "cover"},
       "text": [
         {
           "region": "footer",
-          "html": "Package and distribute your own application, and target your dev efforts for one platform"
+          "html": "Package your own HTML5 application, and target your dev efforts for one platform"
         }
       ],
       "number": 29
     },
     {
+      "background": "villians.png",
       "text": [
         {
           "region": "header",
@@ -131,7 +119,7 @@
       "number": 31
     },
     {
-      "background": "batmancliffhanger.jpg",
+      "background": "cliffhanger.png",
       "text": [
         {
           "region": "footer",
@@ -159,15 +147,6 @@
         }
       ],
       "number": 34
-    },
-    {
-      "text": [
-        {
-          "region": "footer",
-          "html": "note: make an image: atom = webkit + node"
-        }
-      ],
-      "number": 35
     }
   ]
 }
