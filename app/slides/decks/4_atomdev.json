@@ -2,6 +2,9 @@
   "slides": [
     {
       "background": "adam-west-batman.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
@@ -11,31 +14,21 @@
       "number": 36
     },
     {
-      "images": [
-        {
-          "region": "center",
-          "image": "nodemainjs.jpg"
-        }
-      ],
+      "background": "fireupnode.png",
       "text": [
         {
           "region": "footer",
-          "html": "Normal Node apps start via command line"
+          "html": "We usually fire up Node apps via command line"
         }
       ],
       "number": 37
     },
     {
-      "images": [
-        {
-          "region": "center",
-          "image": "atomshelllauncher.jpg"
-        }
-      ],
+      "background": "callupatomshell.png",
       "text": [
         {
           "region": "footer",
-          "html": "Atom-shell apps can start the same way (for devs)"
+          "html": "Atom-shell apps can be called up in much the same way (for devs)"
         }
       ],
       "number": 38
@@ -81,6 +74,9 @@
     },
     {
       "background": "whatarewelaunching.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",

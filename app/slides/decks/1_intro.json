@@ -2,6 +2,9 @@
   "slides": [
     {
       "background": "batmobile.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "header",
@@ -74,6 +77,9 @@
     },
     {
       "background": "batmansparents.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
@@ -84,6 +90,9 @@
     },
     {
       "background": "batusi.gif",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
@@ -114,6 +123,9 @@
     },
     {
       "background": "unmask.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "header",
@@ -128,6 +140,9 @@
     },
     {
       "background": "batmanpow.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
@@ -165,7 +180,6 @@
     },
     {
       "background": "friends.jpg",
-      "backgroundProperties": { "bounds": "auto" },
       "text": [
         {
           "region": "header",
@@ -180,6 +194,9 @@
     },
     {
       "background": "riddler.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "header",

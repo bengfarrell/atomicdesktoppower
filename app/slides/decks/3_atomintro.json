@@ -1,28 +1,36 @@
 {
   "slides": [
-      {
-          "background": "alfredsetup.jpg",
-          "images": [
-              {
-                  "region": "center",
-                  "image": "atomequals.png"
-              }
-          ],
-          "number": 35
+    {
+      "background": "alfredsetup.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
       },
+      "images": [
+        {
+          "region": "center",
+          "image": "atomequals.png"
+        }
+      ],
+      "number": 24
+    },
     {
       "background": "atom-full.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
           "html": "Github's Atom Editor"
         }
       ],
-      "number": 23
+      "number": 25
     },
     {
       "background": "underthehood.png",
-      "backgroundProperties": { "bound": "cover" },
+      "backgroundProperties": {
+        "bound": "cover"
+      },
       "text": [
         {
           "region": "header",
@@ -33,14 +41,14 @@
           "html": "Atom is powered by Atom-Shell"
         }
       ],
-      "number": 24
+      "number": 26
     },
     {
       "text": [
-          {
-              "region": "header",
-              "html": "With Atom-Shell..."
-          },
+        {
+          "region": "header",
+          "html": "With Atom-Shell..."
+        },
         {
           "region": "footer",
           "html": "Batman &amp Friends<br />have a sweet ride"
@@ -52,17 +60,20 @@
           "image": "adam-west-batmobile-with-batgirl.jpg"
         }
       ],
-      "number": 26
+      "number": 27
     },
     {
       "background": "loadupwebkit.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "header",
           "html": "As always, load up Webkit with your preferred stack..."
         }
       ],
-      "number": 27
+      "number": 28
     },
     {
       "text": [
@@ -81,18 +92,20 @@
           "image": "browsers.png"
         }
       ],
-      "number": 28
+      "number": 29
     },
     {
       "background": "packageupyourhtml5.png",
-        "backgroundProperties": { "bounds": "cover"},
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
           "html": "Package your own HTML5 application, and target your dev efforts for one platform"
         }
       ],
-      "number": 29
+      "number": 30
     },
     {
       "background": "villians.png",
@@ -106,17 +119,20 @@
           "html": "Batman has to deal with many supervillians, just like you do…."
         }
       ],
-      "number": 30
+      "number": 31
     },
     {
       "background": "villians.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
           "html": "But when they gang up and you have to deal with them all..."
         }
       ],
-      "number": 31
+      "number": 32
     },
     {
       "background": "cliffhanger.png",
@@ -126,27 +142,33 @@
           "html": "<p>It’s usually at least a two-parter, with great peril</p><small>(just like your dev timeline)</small>"
         }
       ],
-      "number": 32
+      "number": 33
     },
     {
       "background": "nodejslogobig.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
           "html": "A simple environment for packaging HTML5 apps is great, but where's the Bat Computer?"
         }
       ],
-      "number": 33
+      "number": 34
     },
     {
       "background": "mobilecrime.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
       "text": [
         {
           "region": "footer",
           "html": "just check the trunk!"
         }
       ],
-      "number": 34
+      "number": 35
     }
   ]
 }
