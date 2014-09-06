@@ -3,6 +3,8 @@ app/components/core-*
 app/components/paper-*
 app/components/platform
 
+app/slides/stats.json
+
 .idea
 _temp
 binaries

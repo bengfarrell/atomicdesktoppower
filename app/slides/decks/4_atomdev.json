@@ -86,12 +86,7 @@
       "number": 43
     },
     {
-      "images": [
-        {
-          "region": "center",
-          "image": "projectstructure.png"
-        }
-      ],
+      "background": "projectstructure.png",
       "text": [
         {
           "region": "footer",
@@ -110,6 +105,22 @@
         }
       ],
       "number": 45
+    },
+    {
+      "background": "jokershakeshands.png",
+      "images": [
+        {
+          "region": "center",
+          "image": "packagejson.png"
+        }
+      ],
+      "text": [
+        {
+          "region": "footer",
+          "html": "Meet our package.json file"
+        }
+      ],
+      "number": 46
     }
   ]
 }

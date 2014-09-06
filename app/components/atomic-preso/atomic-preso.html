@@ -29,6 +29,23 @@ Element providing solution to no problem in particular.
   <script>
 
     Polymer('atomic-preso', {
+
+        /**
+         * slides path
+         *
+         * @property slidesPath
+         * @type string
+         */
+        slidesPath: './app/slides/',
+
+        /**
+         * slide stats
+         *
+         * @property slide stats
+         * @type object
+         */
+        slideStats: { slides: [] },
+
         /**
         * slide index
         *
@@ -36,6 +53,14 @@ Element providing solution to no problem in particular.
         * @type int
         */
         slideIndex: 0,
+
+        /**
+         * last slide index
+         *
+         * @property lastSlideIndex
+         * @type int
+         */
+        lastSlideIndex: 0,
 
         /**
          * slides
@@ -59,6 +84,12 @@ Element providing solution to no problem in particular.
          * @method ready
          */
         ready: function() {
+            // load our slide stats file
+            var fs = require('fs');
+            if (fs.existsSync(this.slidesPath + 'stats.json')) {
+                this.slideStats = JSON.parse(fs.readFileSync(this.slidesPath + 'stats.json'));
+            }
+
             var remote = require('remote');
             this.loadDeck();
             this.loadSlide(remote.getGlobal('config').slide -1);
@@ -77,13 +108,13 @@ Element providing solution to no problem in particular.
             var self = this;
             this.slides = [];
             var fs = require('fs');
-            var manifest = JSON.parse(fs.readFileSync('./app/slides/manifest.json'));
+            var manifest = JSON.parse(fs.readFileSync(this.slidesPath + 'manifest.json'));
             manifest.content.forEach( function(deck) {
                 try {
-                    var slds = JSON.parse(fs.readFileSync('./app/slides/' + deck.file));
+                    var slds = JSON.parse(fs.readFileSync(self.slidesPath + deck.file));
                     self.slides = self.slides.concat(slds.slides )
                 } catch(e) {
-                    console.log('JSON Parsing error for ./app/slides/' + deck.file);
+                    console.log('JSON Parsing error for ' + self.slidesPath + deck.file);
                     console.log(e.message);
                 }
             });
@@ -111,6 +142,7 @@ Element providing solution to no problem in particular.
             if (this.slideIndex +1 >= this.slides.length) {
                 return this.slides.length-1;
             }
+            this.lastSlideIndex = this.slideIndex;
             this.slideIndex ++;
             this.loadSlide(this.slideIndex);
             return this.slideIndex;
@@ -127,6 +159,7 @@ Element providing solution to no problem in particular.
                 return 0;
             }
 
+            this.lastSlideIndex = this.slideIndex;
             this.slideIndex --;
             this.loadSlide(this.slideIndex);
             return this.slideIndex;
@@ -139,6 +172,8 @@ Element providing solution to no problem in particular.
         * @param {int} index of slide
         */
         loadSlide: function(index) {
+            console.log(this.lastSlideIndex, index)
+            this.recordSlide(this.lastSlideIndex, index);
             this.slideIndex = index;
             this.$.slideviewer.clear();
             var sld = this.slides[index];
@@ -159,7 +194,42 @@ Element providing solution to no problem in particular.
             if (sld.background) {
                 this.$.slideviewer.setBackgroundImage(sld.background, sld.backgroundProperties);
             }
-        }
+        },
+
+        /**
+         * record slide
+         *
+         * @method recordSlide
+         * @param {int} old index of slide
+         * @param {int} new index of slide
+         */
+         recordSlide: function(oldindex, newindex) {
+            var fs = require('fs');
+
+            var oldslide;
+            var newslide;
+
+            this.slideStats.slides.forEach( function(sld) {
+                if (sld.number == oldindex+1) { oldslide = sld; }
+                if (sld.number == newindex+1) { newslide = sld; }
+            });
+
+            if (!oldslide && oldindex != 0) { oldslide = { number: oldindex+1 }; this.slideStats.slides.push( oldslide )};
+            if (!newslide) { newslide = { number: newindex+1 }; this.slideStats.slides.push( newslide )};
+
+            if (oldslide) {
+                oldslide.endTime = new Date().getTime();
+                if (oldslide.startTime) {
+                    oldslide.duration = (oldslide.endTime - oldslide.startTime)/1000;
+                }
+            }
+
+            if (newslide) {
+                newslide.startTime = new Date().getTime();
+            }
+            this.slideStats.lastSlide = newindex +1;
+            fs.writeFileSync(this.slidesPath + 'stats.json', JSON.stringify(this.slideStats, null, 2));
+         }
 
     });
 
