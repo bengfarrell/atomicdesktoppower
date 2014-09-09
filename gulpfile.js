@@ -28,11 +28,11 @@ gulp.task('numberslides', function() {
 });
 
 gulp.task('demo', shell.task([
-        'binaries\\atom.exe app debug:false slide:' + gulp.env.slide
+        'binaries\\atom.exe app debug:' + gulp.env.debug + ' slide:' + gulp.env.slide
 ]));
 
 gulp.task('democ', shell.task([
-    'binaries\\atom.exe app debug:false html:components/' + gulp.env.comp + '/demo.html'
+    'binaries\\atom.exe app debug:' + gulp.env.debug + ' html:components/' + gulp.env.comp + '/demo.html'
 ]));
 
 gulp.task('default', ['downloadatomshell']);
