@@ -32,7 +32,7 @@ gulp.task('demo', shell.task([
 ]));
 
 gulp.task('democ', shell.task([
-    'binaries/atom app debug:false html:components/' + gulp.env.comp + '/demo.html'
+    'binaries\\atom.exe app debug:true html:components/' + gulp.env.comp + '/demo.html'
 ]));
 
 gulp.task('default', ['downloadatomshell']);

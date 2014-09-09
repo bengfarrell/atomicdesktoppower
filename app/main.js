@@ -27,6 +27,24 @@ app.on('ready', function() {
         slide: 1
     }
 
+    var ipc = require('ipc');
+    ipc.on('keyboardEvent', function(event, arg) {
+        switch(arg.key) {
+            case "S":
+                secondaryWindow = new BrowserWindow({width: 800, height: 300});
+                secondaryWindow.loadUrl('file://' + __dirname + '/stats.html' );
+                secondaryWindow.on('closed', function() { secondaryWindow = null; });
+                break;
+            case "D":
+                if (arg.window == "main") {
+                    mainWindow.openDevTools();
+                } else {
+                    secondaryWindow.openDevTools();
+                }
+                break;
+        }
+    });
+
     process.argv.forEach(function(arg) {
         var key = arg.split(':')[0];
         var value = arg.split(':')[1];
@@ -45,16 +63,12 @@ app.on('ready', function() {
     }
 
     mainWindow.loadUrl('file://' + __dirname + '/' + global['config'].html );
+    //secondaryWindow.loadUrl('file://' + __dirname + '/components/atomic-stats/demo.html' );
 
     if (global['config'].debug) {
         mainWindow.openDevTools();
     }
 
     // Emitted when the window is closed.
-    mainWindow.on('closed', function() {
-        // Dereference the window object, usually you would store windows
-        // in an array if your app supports multi windows, this is the time
-        // when you should delete the corresponding element.
-        mainWindow = null;
-    });
+    mainWindow.on('closed', function() { mainWindow = null; });
 });

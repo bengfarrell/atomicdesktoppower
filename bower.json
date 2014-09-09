@@ -13,7 +13,8 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "~0.3.5"
+    "polymer": "~0.3.5",
+    "d3": "*"
   },
   "resolutions": {
     "polymer": ">=0.4.0 <1.0.0"

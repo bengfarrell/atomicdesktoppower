@@ -8,19 +8,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <script src="components/platform/platform.js"></script>
-    <link rel="import" href="components/atomic-preso/atomic-preso.html">
+    <link rel="import" href="components/atomic-stats/atomic-stats.html">
 
     <script>
         var ipc = require('ipc');
         document.onkeydown = function(event) {
-            if (event.keyCode == 37) {
-                document.getElementById('preso').previousSlide();
-            } else if (event.keyCode == 39) {
-                document.getElementById('preso').nextSlide();
-            }  else if (String.fromCharCode(event.keyCode) == "C") {
-                document.getElementById('preso').reloadDeck();
-            }
-            ipc.send('keyboardEvent', { window: "main", keyCode: event.keyCode, key: String.fromCharCode(event.keyCode), action: 'keydown' });
+           ipc.send('keyboardEvent',
+                   {    window: "secondary",
+                        keyCode: event.keyCode,
+                        key: String.fromCharCode(event.keyCode),
+                        action: 'keydown' });
         }
     </script>
 
@@ -42,7 +39,7 @@
 </head>
 
 <body unresolved touch-action="auto">
-    <atomic-preso id="preso"></atomic-preso>
+    <atomic-stats id="stats"></atomic-stats>
 </body>
 
 </html>

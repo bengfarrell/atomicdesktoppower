@@ -92,7 +92,14 @@ Element providing solution to no problem in particular.
 
             var remote = require('remote');
             this.loadDeck();
-            this.loadSlide(remote.getGlobal('config').slide -1);
+
+            var startSldIndex;
+            if (remote.getGlobal('config').slide == "last" && this.slideStats.lastSlide) {
+                startSldIndex = this.slideStats.lastSlide;
+            } else {
+                startSldIndex = remote.getGlobal('config').slide;
+            }
+            this.loadSlide(startSldIndex -1);
 
             var os = require( 'os' );
             var networkInterfaces = os.networkInterfaces( );
@@ -172,7 +179,6 @@ Element providing solution to no problem in particular.
         * @param {int} index of slide
         */
         loadSlide: function(index) {
-            console.log(this.lastSlideIndex, index)
             this.recordSlide(this.lastSlideIndex, index);
             this.slideIndex = index;
             this.$.slideviewer.clear();
@@ -228,6 +234,12 @@ Element providing solution to no problem in particular.
                 newslide.startTime = new Date().getTime();
             }
             this.slideStats.lastSlide = newindex +1;
+            this.slideStats.totalSlides = this.slides.length;
+
+            this.slideStats.slides.sort( function(a, b) {
+               if (a.number < b.number) { return -1 }
+               else { return 1; }
+            });
             fs.writeFileSync(this.slidesPath + 'stats.json', JSON.stringify(this.slideStats, null, 2));
          }
 
