@@ -63,7 +63,6 @@ app.on('ready', function() {
     }
 
     mainWindow.loadUrl('file://' + __dirname + '/' + global['config'].html );
-    //secondaryWindow.loadUrl('file://' + __dirname + '/components/atomic-stats/demo.html' );
 
     if (global['config'].debug) {
         mainWindow.openDevTools();
