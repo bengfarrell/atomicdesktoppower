@@ -1,0 +1,113 @@
+<link rel="import" href="../polymer/polymer.html">
+<script src="../d3/d3.min.js"></script>
+
+<!--
+Element providing solution to no problem in particular.
+
+##### Example
+
+    <atomic-stats></atomic-stats>
+
+@element atomic-stats
+@blurb Element providing solution to no problem in particular.
+@status alpha
+@homepage http://bengfarrell.github.io/atomic-stats
+-->
+<polymer-element name="atomic-stats" attributes="notitle">
+
+  <template>
+
+    <link rel="stylesheet" href="atomic-stats.css" />
+
+    <content>
+        <div id="chart"></div>
+    </content>
+
+  </template>
+
+  <script>
+
+    Polymer('atomic-stats', {
+        /**
+         * slides path
+         *
+         * @property slidesPath
+         * @type string
+         */
+        slidesPath: './app/slides/',
+
+        /**
+         * ready
+         *
+         * @method ready
+         */
+        ready: function() {
+            var fs = require('fs');
+            var stats = JSON.parse(fs.readFileSync(this.slidesPath + 'stats.json'));
+            var data = [];
+            for (var c = 0; c < stats.totalSlides; c++) { data.push( 0 ); }
+            stats.slides.forEach( function(sld) {
+                data[sld.number-1] = sld.duration ? sld.duration : 0;
+            });
+
+            //Width and height
+            var w = 1000;
+            var h = 200;
+            var barPadding = 1;
+            var svg = d3.select(this.$.chart)
+                    .append("svg")
+                    .attr("width", w + 50)
+                    .attr("height", h);
+
+            svg.selectAll("rect")
+                    .data(data)
+                    .enter()
+                    .append("rect")
+                    .attr("x", function(d, i) {
+                        return i * (w / data.length) + 50;
+                    })
+                    .attr("y", function(d) {
+                        return h - (d * 10) - 13;
+                    })
+                    .attr("width", w / data.length - barPadding)
+                    .attr("height", function(d) {
+                        return d * 100;
+                    })
+                    .attr("fill", function(d) {
+                        return "rgb(0, 0, " + (Math.floor(d * 10)) + ")";
+                    });
+
+            svg.selectAll("text")
+                    .data(data)
+                    .enter()
+                    .append("text")
+                    .text(function(d, i) { return i })
+                    .attr("text-anchor", "middle")
+                    .attr("x", function(d, i) {
+                        return i * (w / data.length) + (w / data.length - barPadding) / 2  + 50;
+                    })
+                    .attr("y", function(d) { return h; })
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "11px")
+                    .attr("fill", "black");
+
+            svg.selectAll("text")
+                    .data(data)
+                    .enter()
+                    .append("text")
+                    .text(function(d, i) { return Math.ceil(d); })
+                    .attr("text-anchor", "middle")
+                    .attr("x", function(d, i) {
+                        return i * (w / data.length) + (w / data.length - barPadding) / 2  + 50;
+                    })
+                    .attr("y", function(d) { return h +5; })
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "11px")
+                    .attr("fill", "white");
+        }
+
+    });
+
+  </script>
+
+</polymer-element>

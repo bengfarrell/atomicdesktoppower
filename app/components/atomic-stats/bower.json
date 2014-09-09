@@ -1,0 +1,13 @@
+{
+  "name": "atomic-stats",
+  "version": "0.0.0",
+  "keywords": [
+    "seed",
+    "polymer",
+    "web-components"
+  ],
+  "main": "atomic-stats.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^0.4.0"
+  }
+}
