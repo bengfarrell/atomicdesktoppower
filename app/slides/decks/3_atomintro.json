@@ -1,10 +1,6 @@
 {
   "slides": [
     {
-      "background": "alfredsetup.jpg",
-      "backgroundProperties": {
-        "bounds": "cover"
-      },
       "images": [
         {
           "region": "center",

@@ -107,7 +107,7 @@
       "number": 45
     },
     {
-      "background": "jokershakeshands.png",
+      "background": "jokerpresent.png",
       "images": [
         {
           "region": "center",
@@ -122,26 +122,80 @@
       ],
       "number": 46
     },
-      {
-          "background": "commissioner.png",
-          "text": [
-              {
-                  "region": "footer",
-                  "html": "HTML5 does need some guidance on what to do"
-              }
-          ],
-          "number": 46
+    {
+      "background": "commissioner.png",
+      "backgroundProperties": {
+        "bounds": "cover"
       },
-
-      {
-          "background": "commissioner.png",
-          "text": [
-              {
-                  "region": "footer",
-                  "html": "all is laid out in our Node.js entry point"
-              }
-          ],
-          "number": 46
-      }
+      "text": [
+        {
+          "region": "header",
+          "html": "HTML5 needs guidance"
+        },
+        {
+          "region": "footer",
+          "html": "look to the Node.js entry point"
+        }
+      ],
+      "number": 47
+    },
+    {
+      "background": "mainjs.png",
+      "number": 48
+    },
+    {
+      "background": "plainvanilla.png",
+      "number": 49,
+      "text": [
+        {
+          "region": "footer",
+          "html": "once loaded, it's all plain vanilla HTML/JS/CSS"
+        }
+      ]
+    },
+    {
+      "background": "priceless.png",
+      "number": 50,
+      "text": [
+        {
+          "region": "header",
+          "html": "Doesn't have to be plain"
+        },
+        {
+          "region": "footer",
+          "html": "Could be a sparkly new tech like Polymer"
+        }
+      ]
+    },
+    {
+      "background": "alfredsetup.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Node.js called"
+        },
+        {
+          "region": "footer",
+          "html": "it wants into your HTML5"
+        }
+      ],
+      "number": 51
+    },
+    {
+      "background": "alfredsetup.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "images": [
+        {
+          "region": "center_full",
+          "image": "fsread.png"
+        }
+      ],
+      "number": 52
+    }
   ]
 }
