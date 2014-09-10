@@ -1,0 +1,140 @@
+{
+  "slides": [
+    {
+      "background": "arguments.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Friendly arguments"
+        },
+        {
+          "region": "footer",
+          "html": "process.argv contains your incoming CLI args <br />  binaries\\atom.exe app arg1 arg2 arg3"
+        }
+      ],
+      "number": 53
+    },
+    {
+      "background": "thinking.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Don't think too hard"
+        },
+        {
+          "region": "footer",
+          "html": "Use the debugger: mywindow.openDevTools();"
+        }
+      ],
+      "number": 54
+    },
+    {
+      "background": "batbomb.gif",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Webkit <-> Node Communication"
+        },
+        {
+          "region": "footer",
+          "html": "a ticking timebomb"
+        }
+      ],
+      "number": 55
+    },
+    {
+      "background": "batsprays.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Sometimes it helps to label things"
+        },
+        {
+          "region": "footer",
+          "html": "browser = Node.js side <br /> Web page = HTML5 side"
+        }
+      ],
+      "number": 56
+    },
+    {
+      "background": "batbomb1.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Global Variables"
+        },
+        {
+          "region": "left",
+          "html": "<ul><li>set in Node with global[&quot;myvar&quot;]</li><li>retrieve in webkit with remote.getGlobal(&quot;myvar&quot;)</li><li>primitives are copy by ref</li><li>functions can cause bad stuff to happen</li></ul>"
+        }
+      ],
+      "number": 57
+    },
+    {
+      "background": "batbomb2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Inter process Communication"
+        },
+        {
+          "region": "footer",
+          "html": "Require Module: var ipc = require('ipc'); <br /> Send: ipc.send('namedevent', arg) <br /> Recieve: ipc.on('namedevent', function(event, arg) {..."
+        }
+      ],
+      "number": 58
+    },
+    {
+      "background": "batbomb3.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Why IPC is a ticking bomb"
+        },
+        {
+          "region": "footer",
+          "html": "ipc.sendSync can lock up processes (and block my images!)"
+        }
+      ],
+      "number": 59
+    },
+    {
+      "background": "batmanwall.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Making use of multiple windows"
+        },
+        {
+          "region": "footer",
+          "html": "just create a new var: <br /> secondaryWindow = new BrowserWindow({width: 800, height: 300});"
+        }
+      ],
+      "number": 60
+    }
+  ]
+}
