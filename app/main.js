@@ -18,15 +18,32 @@ app.on('window-all-closed', function() {
 // This method will be called when atom-shell has done everything
 // initialization and ready for creating browser windows.
 app.on('ready', function() {
-
-    // Create the browser window.
-    mainWindow = new BrowserWindow({width: 1200, height: 800});
-
     global['config'] = {
         html: 'index.html',
         debug: false,
-        slide: 1
+        slide: 1,
+        frame: true,
+        fullscreen: false
     }
+
+    process.argv.forEach(function(arg) {
+        var key = arg.split(':')[0];
+        var value = arg.split(':')[1];
+
+        if (value != "undefined" && value != undefined && value) {
+            global['config'][key] = value;
+            if (key == "debug" || key == "frame" || key == "fullscreen") {
+                global['config'].debug = (global['config'].debug == "true") ? true:false;
+                global['config'].frame = (global['config'].frame == "true") ? true:false;
+                global['config'].fullscreen = (global['config'].fullscreen == "true") ? true:false;
+            }
+            console.log("Setting config." + key + " to " + value);
+        }
+    });
+
+
+    // Create the browser window.
+    mainWindow = new BrowserWindow( { frame: global['config'].frame, fullscreen: global['config'].fullscreen});
 
     var ipc = require('ipc');
     ipc.on('keyboardEvent', function(event, arg) {
@@ -43,25 +60,13 @@ app.on('ready', function() {
                     secondaryWindow.openDevTools();
                 }
                 break;
+
+            case "X":
+                mainWindow.close();
+                if (secondaryWindow) { secondaryWindow.close(); }
+                break;
         }
     });
-
-    process.argv.forEach(function(arg) {
-        var key = arg.split(':')[0];
-        var value = arg.split(':')[1];
-
-        if (value != "undefined" && value != undefined && value) {
-            global['config'][key] = value;
-            console.log("Setting config." + key + " to " + value);
-        }
-    });
-
-    // type co-erce
-    if (global['config'].debug == "true") {
-        global['config'].debug = true;
-    } else {
-        global['config'].debug = false;
-    }
 
     mainWindow.loadUrl('file://' + __dirname + '/' + global['config'].html );
 

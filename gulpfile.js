@@ -27,11 +27,15 @@ gulp.task('numberslides', function() {
     });
 });
 
-gulp.task('demo', shell.task([
+gulp.task('present', shell.task([
+        'binaries\\atom.exe app frame:false fullscreen:true'
+]));
+
+gulp.task('dev', shell.task([
         'binaries\\atom.exe app debug:' + gulp.env.debug + ' slide:' + gulp.env.slide
 ]));
 
-gulp.task('democ', shell.task([
+gulp.task('devc', shell.task([
     'binaries\\atom.exe app debug:' + gulp.env.debug + ' html:components/' + gulp.env.comp + '/demo.html'
 ]));
 
