@@ -103,7 +103,16 @@ Element providing solution to no problem in particular.
 
             var os = require( 'os' );
             var networkInterfaces = os.networkInterfaces( );
-            //this.wlanip = networkInterfaces.wlan0[0].address;
+
+            for (var c in networkInterfaces) {
+                var iface = networkInterfaces[c];
+                for (var d in networkInterfaces[c] ) {
+                    var iface = networkInterfaces[c][d];
+                    if (iface.family == "IPv4" && iface.address != "127.0.0.1") {
+                        this.wlanip = iface.address;
+                    }
+                }
+            }
         },
 
         /**
