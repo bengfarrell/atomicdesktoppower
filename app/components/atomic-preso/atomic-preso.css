@@ -4,3 +4,24 @@ atomic-slide {
     background: radial-gradient(ellipse at center, #fefcea 0%,#f1da36 100%);
     position: absolute;
 }
+
+.infobar {
+    background-color: #000000;
+    color: #ababab;
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.infobar .slides {
+    left: 10px;
+    top: 3px;
+    position: absolute;
+}
+.infobar .wlanip {
+    right: 10px;
+    top: 3px;
+    position: absolute;
+}
+

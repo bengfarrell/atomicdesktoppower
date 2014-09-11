@@ -20,8 +20,11 @@ Element providing solution to no problem in particular.
     <link rel="stylesheet" href="atomic-preso.css" />
 
     <content>
-        <span >{{slideIndex +1}} of {{slides.length}}</span> <span>{{wlanip}}</span>
         <atomic-slide id="slideviewer"></atomic-slide>
+        <div class="infobar">
+            <div class="slides">{{slideIndex +1}} of {{slides.length}}</div>
+            <div class="wlanip">{{wlanip}}</div>
+        </div>
     </content>
 
   </template>
@@ -115,7 +118,7 @@ Element providing solution to no problem in particular.
                 for (var d in networkInterfaces[c] ) {
                     var iface = networkInterfaces[c][d];
                     if (iface.family == "IPv4" && iface.address != "127.0.0.1") {
-                        this.wlanip = iface.address;
+                        this.wlanip = "http://" + iface.address + ":3000";
                     }
                 }
             }
@@ -143,7 +146,6 @@ Element providing solution to no problem in particular.
                     }
                 });
                 this.$.slideviewer.imgpath = manifest.baseImagePath;
-                fs.writeFileSync(this.slidesPath + 'generatedslides.json', JSON.stringify( { baseImagePath: manifest.baseImagePath, slides: self.slides}, null, 2));
             } else {
                 this.loadSlidesAjax();
             }
@@ -162,7 +164,7 @@ Element providing solution to no problem in particular.
                     if(xmlhttp.status == 200){
                         self.$.slideviewer.imgpath = JSON.parse(xmlhttp.responseText).baseImagePath;
                         self.slides = JSON.parse(xmlhttp.responseText).slides;
-                        self.loadSlide(self.slideIndex);
+                        self.loadSlide(JSON.parse(xmlhttp.responseText).currentSlide);
                     }
                     else if(xmlhttp.status == 400) { alert('There was an error 400') }
                     else { alert('something else other than 200 was returned') }
@@ -286,6 +288,9 @@ Element providing solution to no problem in particular.
                else { return 1; }
             });
             fs.writeFileSync(this.slidesPath + 'stats.json', JSON.stringify(this.slideStats, null, 2));
+
+            // update generated JSON file for serving to a browser
+            fs.writeFileSync(this.slidesPath + 'generatedslides.json', JSON.stringify( { currentSlide: this.slideIndex, baseImagePath: this.$.slideviewer.imgpath, slides: this.slides}, null, 2));
          }
 
     });
