@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Atomic Desktop Power</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="components/platform/platform.js"></script>
+    <link rel="import" href="components/atomic-preso/atomic-preso.html">
+
+    <script>
+        if (typeof require != "undefined") {
+            var ipc = require('ipc');
+        }
+        document.onkeydown = function(event) {
+            if (event.keyCode == 37) {
+                document.getElementById('preso').previousSlide();
+            } else if (event.keyCode == 39) {
+                document.getElementById('preso').nextSlide();
+            }  else if (String.fromCharCode(event.keyCode) == "C") {
+                document.getElementById('preso').reloadDeck();
+            }
+            if (typeof ipc != "undefined") {
+                ipc.send('keyboardEvent', { window: "main", keyCode: event.keyCode, key: String.fromCharCode(event.keyCode), action: 'keydown' });
+            }
+        }
+    </script>
+
+    <style shim-shadowdom>
+        body {
+            font-family: sans-serif;
+            color: #333;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        atomic-preso {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body unresolved touch-action="auto">
+    <atomic-preso id="preso"></atomic-preso>
+</body>
+
+</html>
