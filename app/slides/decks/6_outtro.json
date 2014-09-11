@@ -1,0 +1,90 @@
+{
+  "slides": [
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "nodewebkit.png"
+        }
+      ],
+      "text": [
+        {
+          "region": "header",
+          "html": "Other Solutions"
+        },
+        {
+          "region": "footer",
+          "html": "Node Webkit"
+        }
+      ],
+      "number": 64
+    },
+    {
+      "images": [
+        {
+          "region": "center",
+          "image": "brackets.png"
+        }
+      ],
+      "text": [
+        {
+          "region": "header",
+          "html": "Other Solutions"
+        },
+        {
+          "region": "footer",
+          "html": "Adobe Brackets"
+        }
+      ],
+      "number": 65
+    },
+    {
+      "background": "batmancatwoman.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Sometimes we all just happen to be <br /> working together"
+        },
+        {
+          "region": "footer",
+          "html": "We love multiple solutions even if they come from competitors"
+        }
+      ],
+      "number": 66
+    },
+    {
+      "background": "happyanniversary.png",
+      "text": [
+        {
+          "region": "header",
+          "html": "Lets celebrate HTML5"
+        },
+        {
+          "region": "footer",
+          "html": "by making cool apps with Node.js + Webkit"
+        }
+      ],
+      "number": 67
+    },
+    {
+      "background": "batsignal.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Thanks!"
+        },
+        {
+          "region": "footer",
+          "html": "ben@benfarrell.com <br /> https://github.com/bengfarrell/atomicdesktoppower"
+        }
+      ],
+      "number": 68
+    }
+  ]
+}

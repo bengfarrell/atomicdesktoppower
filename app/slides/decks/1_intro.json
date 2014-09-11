@@ -18,6 +18,13 @@
       "number": 1
     },
     {
+      "background": "intro.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 2
+    },
+    {
       "text": [
         {
           "region": "footer",
@@ -30,7 +37,7 @@
           "image": "html5logo.png"
         }
       ],
-      "number": 2
+      "number": 3
     },
     {
       "text": [
@@ -49,7 +56,7 @@
           "image": "htmljscss.png"
         }
       ],
-      "number": 3
+      "number": 4
     },
     {
       "background": "batmanisawesome.jpg",
@@ -59,7 +66,7 @@
           "html": "Batman is awesome, too"
         }
       ],
-      "number": 4
+      "number": 5
     },
     {
       "background": "stylestructurepower.jpg",
@@ -73,7 +80,7 @@
           "html": "structure, power, and style"
         }
       ],
-      "number": 5
+      "number": 6
     },
     {
       "background": "batmansparents.jpg",
@@ -86,7 +93,7 @@
           "html": "every hero needs a good origin story"
         }
       ],
-      "number": 6
+      "number": 7
     },
     {
       "background": "batusi.gif",
@@ -99,7 +106,7 @@
           "html": "...but sometimes these things can be too dark, and we prefer happier times"
         }
       ],
-      "number": 7
+      "number": 8
     },
     {
       "background": "flashjavaarebatmansparents.png",
@@ -109,7 +116,7 @@
           "html": "Some might say that HTML5 has some dark origins, too."
         }
       ],
-      "number": 8
+      "number": 9
     },
     {
       "background": "icanhashtml5.jpg",
@@ -119,7 +126,7 @@
           "html": "...but again, happy thoughts please."
         }
       ],
-      "number": 9
+      "number": 10
     },
     {
       "background": "unmask.jpg",
@@ -136,7 +143,7 @@
           "html": "just a buzzword - we say HTML5 when we mean modern HTML/CSS/JS"
         }
       ],
-      "number": 10
+      "number": 11
     },
     {
       "background": "batmanpow.jpg",
@@ -157,7 +164,7 @@
           "html": "<ul><li>SVG</li><li>Web Fonts</li><li>Mouse/Key Events</li><li>Debugging</li><li>AJAX</li><li>Prototypical Inheritance</li></ul>"
         }
       ],
-      "number": 11
+      "number": 12
     },
     {
       "images": [
@@ -176,7 +183,7 @@
           "html": "sometimes, we need some additional tricks up our sleeve </br ><span>video&nbsp;&nbsp;&nbsp;&nbsp;audio&nbsp;&nbsp;&nbsp;&nbsp;microphone&nbsp;&nbsp;&nbsp;&nbsp;local storage&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;webgl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;css transform</span>"
         }
       ],
-      "number": 12
+      "number": 13
     },
     {
       "background": "friends.jpg",
@@ -190,7 +197,7 @@
           "html": "And who can say no to workflow improvements with the help of some friends?"
         }
       ],
-      "number": 13
+      "number": 14
     },
     {
       "background": "riddler.png",
@@ -207,7 +214,7 @@
           "html": "<p>Batman can fight crime with gadgets, sick dance moves, and friends.</p><p>But how does he actually SOLVE crimes?</p><p>There’s another piece to this ecosystem...</p>"
         }
       ],
-      "number": 14
+      "number": 15
     }
   ]
 }

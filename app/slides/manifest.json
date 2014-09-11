@@ -5,6 +5,7 @@
         { "name": "nodejs", "file": "decks/2_nodejs.json" },
         { "name": "atom shell intro", "file": "decks/3_atomintro.json" },
         { "name": "dev with atom", "file": "decks/4_atomdev.json" },
-        { "name": "atom features", "file": "decks/5_atomfeatures.json" }
+        { "name": "atom features", "file": "decks/5_atomfeatures.json" },
+        { "name": "atom features", "file": "decks/6_outtro.json" }
     ]
 }

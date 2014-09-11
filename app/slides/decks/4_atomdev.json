@@ -11,7 +11,7 @@
           "html": "How does it work?"
         }
       ],
-      "number": 36
+      "number": 37
     },
     {
       "background": "fireupnode.png",
@@ -21,7 +21,7 @@
           "html": "We usually fire up Node apps via command line"
         }
       ],
-      "number": 37
+      "number": 38
     },
     {
       "background": "callupatomshell.png",
@@ -31,7 +31,7 @@
           "html": "Atom-shell apps can be called up in much the same way (for devs)"
         }
       ],
-      "number": 38
+      "number": 39
     },
     {
       "images": [
@@ -46,7 +46,7 @@
           "html": "But, let’s start easy"
         }
       ],
-      "number": 39
+      "number": 40
     },
     {
       "background": "gulpdownloadtask.png",
@@ -56,11 +56,11 @@
           "html": "npm install gulp-download-atom-shell"
         }
       ],
-      "number": 40
+      "number": 41
     },
     {
       "background": "batmanwtf.png",
-      "number": 41
+      "number": 42
     },
     {
       "background": "brucewayne.png",
@@ -70,7 +70,7 @@
           "html": "Let's think about how to launch our project..."
         }
       ],
-      "number": 42
+      "number": 43
     },
     {
       "background": "whatarewelaunching.jpg",
@@ -83,7 +83,7 @@
           "html": "Holy Javascript Batman! But, what are we launching?"
         }
       ],
-      "number": 43
+      "number": 44
     },
     {
       "background": "projectstructure.png",
@@ -94,7 +94,7 @@
           "note": "info about project being inside app directory, note that it's the first arg of the launcher"
         }
       ],
-      "number": 44
+      "number": 45
     },
     {
       "background": "batcaveentrance.jpg",
@@ -104,7 +104,7 @@
           "html": "So, where's the entry point?"
         }
       ],
-      "number": 45
+      "number": 46
     },
     {
       "background": "jokerpresent.png",
@@ -120,7 +120,7 @@
           "html": "Meet our package.json file"
         }
       ],
-      "number": 46
+      "number": 47
     },
     {
       "background": "commissioner.png",
@@ -137,15 +137,15 @@
           "html": "look to the Node.js entry point"
         }
       ],
-      "number": 47
-    },
-    {
-      "background": "mainjs.png",
       "number": 48
     },
     {
+      "background": "mainjs.png",
+      "number": 49
+    },
+    {
       "background": "plainvanilla.png",
-      "number": 49,
+      "number": 50,
       "text": [
         {
           "region": "footer",
@@ -155,7 +155,7 @@
     },
     {
       "background": "priceless.png",
-      "number": 50,
+      "number": 51,
       "text": [
         {
           "region": "header",
@@ -182,7 +182,7 @@
           "html": "it wants into your HTML5"
         }
       ],
-      "number": 51
+      "number": 52
     },
     {
       "background": "alfredsetup.jpg",
@@ -195,7 +195,7 @@
           "image": "fsread.png"
         }
       ],
-      "number": 52
+      "number": 53
     }
   ]
 }
