@@ -4,6 +4,7 @@ app/components/paper-*
 app/components/platform
 
 app/slides/stats.json
+app/slides/generatedslides.json
 
 .idea
 _temp

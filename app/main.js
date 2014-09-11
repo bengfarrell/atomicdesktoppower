@@ -1,5 +1,38 @@
 var app = require('app');  // Module to control application life.
+var path = require('path');
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
+var finalhandler = require('finalhandler');
+/*var express = require('express');
+var server = express();
+var serveIndex = require('serve-index');*/
+var http = require('http')
+var serveIndex = require('serve-index')
+var serveStatic = require('serve-static')
+
+// server our preso
+/*server.use('/', express.static(path.join(__dirname, '/')));
+server.use('/src', serveIndex(path.join(__dirname, '/'), {'icons': true}));
+server.listen(3000, function(){
+    console.log('Express server listening');
+});*/
+
+// Serve directory indexes for public/ftp folder (with icons)
+var index = serveIndex(path.join(__dirname, '/'), {'icons': true})
+
+// Serve up public/ftp folder files
+var serve = serveStatic(path.join(__dirname, '/'));
+
+// Create server
+var server = http.createServer(function onRequest(req, res){
+    var done = finalhandler(req, res)
+    serve(req, res, function onNext(err) {
+        if (err) return done(err)
+        index(req, res, done)
+    })
+})
+
+// Listen
+server.listen(3000)
 
 // Report crashes to our server.
 require('crash-reporter').start();
@@ -19,7 +52,7 @@ app.on('window-all-closed', function() {
 // initialization and ready for creating browser windows.
 app.on('ready', function() {
     global['config'] = {
-        html: 'index.html',
+        html: 'preso.html',
         debug: false,
         slide: 1,
         frame: true,

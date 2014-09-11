@@ -84,6 +84,12 @@ Element providing solution to no problem in particular.
          * @method ready
          */
         ready: function() {
+            // if in a browser, just load the deck
+            if (typeof require == "undefined") {
+                this.loadDeck();
+                return;
+            }
+
             // load our slide stats file
             var fs = require('fs');
             if (fs.existsSync(this.slidesPath + 'stats.json')) {
@@ -123,19 +129,48 @@ Element providing solution to no problem in particular.
         loadDeck: function() {
             var self = this;
             this.slides = [];
-            var fs = require('fs');
-            var manifest = JSON.parse(fs.readFileSync(this.slidesPath + 'manifest.json'));
-            manifest.content.forEach( function(deck) {
-                try {
-                    var slds = JSON.parse(fs.readFileSync(self.slidesPath + deck.file));
-                    self.slides = self.slides.concat(slds.slides )
-                } catch(e) {
-                    console.log('JSON Parsing error for ' + self.slidesPath + deck.file);
-                    console.log(e.message);
-                }
-            });
 
-            this.$.slideviewer.imgpath = manifest.baseImagePath;
+            if (typeof require != "undefined") {
+                var fs = require('fs');
+                var manifest = JSON.parse(fs.readFileSync(this.slidesPath + 'manifest.json'));
+                manifest.content.forEach(function (deck) {
+                    try {
+                        var slds = JSON.parse(fs.readFileSync(self.slidesPath + deck.file));
+                        self.slides = self.slides.concat(slds.slides)
+                    } catch (e) {
+                        console.log('JSON Parsing error for ' + self.slidesPath + deck.file);
+                        console.log(e.message);
+                    }
+                });
+                this.$.slideviewer.imgpath = manifest.baseImagePath;
+                fs.writeFileSync(this.slidesPath + 'generatedslides.json', JSON.stringify( { baseImagePath: manifest.baseImagePath, slides: self.slides}, null, 2));
+            } else {
+                this.loadSlidesAjax();
+            }
+        },
+
+        /**
+         * load slides ajax
+         *
+         * @method loadSlidesAjax
+         */
+        loadSlidesAjax: function() {
+            var self = this;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 ) {
+                    if(xmlhttp.status == 200){
+                        self.$.slideviewer.imgpath = JSON.parse(xmlhttp.responseText).baseImagePath;
+                        self.slides = JSON.parse(xmlhttp.responseText).slides;
+                        self.loadSlide(self.slideIndex);
+                    }
+                    else if(xmlhttp.status == 400) { alert('There was an error 400') }
+                    else { alert('something else other than 200 was returned') }
+                }
+            }
+
+            xmlhttp.open("GET", "slides/generatedslides.json", true);
+            xmlhttp.send();
         },
 
         /**
@@ -219,6 +254,7 @@ Element providing solution to no problem in particular.
          * @param {int} new index of slide
          */
          recordSlide: function(oldindex, newindex) {
+            if (typeof require == "undefined") { return; }
             var fs = require('fs');
 
             var oldslide;
