@@ -147,7 +147,7 @@ Element providing solution to no problem in particular.
                 });
                 this.$.slideviewer.imgpath = manifest.baseImagePath;
             } else {
-                this.loadSlidesAjax();
+                this.loadSlidesAjax(self);
             }
         },
 
@@ -156,18 +156,26 @@ Element providing solution to no problem in particular.
          *
          * @method loadSlidesAjax
          */
-        loadSlidesAjax: function() {
-            var self = this;
+        loadSlidesAjax: function(scope) {
+            var self = scope;
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 ) {
                     if(xmlhttp.status == 200){
-                        self.$.slideviewer.imgpath = JSON.parse(xmlhttp.responseText).baseImagePath;
-                        self.slides = JSON.parse(xmlhttp.responseText).slides;
-                        self.loadSlide(JSON.parse(xmlhttp.responseText).currentSlide);
+                        if (self.slides.length == 0) {
+                            self.$.slideviewer.imgpath = JSON.parse(xmlhttp.responseText).baseImagePath;
+                            self.slides = JSON.parse(xmlhttp.responseText).slides;
+
+                            // first time through and current slide is 0 - I should make this a bit more elegant
+                            if (JSON.parse(xmlhttp.responseText).currentSlide == 0) {
+                                self.loadSlide(0);
+                            }
+                        }
+                        if (JSON.parse(xmlhttp.responseText).currentSlide != self.slideIndex ) {
+                            self.loadSlide(JSON.parse(xmlhttp.responseText).currentSlide);
+                        }
                     }
-                    else if(xmlhttp.status == 400) { alert('There was an error 400') }
-                    else { alert('something else other than 200 was returned') }
+                   setTimeout(function() { self.loadSlidesAjax(self); }, 3000);
                 }
             }
 
