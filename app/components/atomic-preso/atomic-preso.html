@@ -23,6 +23,7 @@ Element providing solution to no problem in particular.
         <atomic-slide id="slideviewer"></atomic-slide>
         <div class="infobar">
             <div class="slides">{{slideIndex +1}} of {{slides.length}}</div>
+            <div class="runtime">{{slideStats.runTime}}</div>
             <div class="wlanip">{{wlanip}}</div>
         </div>
     </content>
@@ -48,6 +49,14 @@ Element providing solution to no problem in particular.
          * @type object
          */
         slideStats: { slides: [] },
+
+        /**
+         * running
+         * is slide deck running (being timed)
+         * @property running
+         * @type boolean
+         */
+        running: false,
 
         /**
         * slide index
@@ -94,6 +103,20 @@ Element providing solution to no problem in particular.
                 return;
             }
 
+            setInterval(function() {
+                if (self.running) {
+                    self.slideStats.duration = Math.floor((new Date().getTime() - self.slideStats.startTime)/1000);
+                    var totalSeconds = self.slideStats.duration;
+                    var hours = Math.floor(totalSeconds / 3600);
+                    totalSeconds %= 3600;
+                    var minutes = Math.floor(totalSeconds / 60);
+                    var seconds = totalSeconds % 60;
+                    if (seconds.toString().length == 1) { seconds = "0" + seconds; }
+                    if (minutes.toString().length == 1) { minutes = "0" + minutes; }
+                    self.slideStats.runTime = hours + ":" + minutes + ":" + seconds;
+                }
+            }, 1000)
+
             var ipc = require('ipc');
             ipc.on('appClosed', function() { self.deconstruct(); });
 
@@ -102,6 +125,12 @@ Element providing solution to no problem in particular.
             if (fs.existsSync(this.slidesPath + 'stats.json')) {
                 this.slideStats = JSON.parse(fs.readFileSync(this.slidesPath + 'stats.json'));
             }
+
+            this.slideStats.runTime = "";
+            this.slideStats.duration = 0;
+            this.slideStats.startTime = 0;
+            this.slideStats.endTime = 0;
+            if (!this.slideStats.slides) { this.slideStats.slides = []; }
 
             var remote = require('remote');
             this.loadDeck();
@@ -127,6 +156,18 @@ Element providing solution to no problem in particular.
                         this.wlanip = "http://" + iface.address + ":3000";
                     }
                 }
+            }
+        },
+
+        /**
+         * toggle timer
+         *
+         * @method toggleTimer
+         */
+        toggleTimer: function() {
+            this.running = !this.running;
+            if (this.slideStats.startTime == 0) {
+                this.slideStats.startTime == new Date().getTime();
             }
         },
 
@@ -318,6 +359,7 @@ Element providing solution to no problem in particular.
             this.slideStats.endTime = new Date().getTime();
             this.slideStats.duration = Math.floor((this.slideStats.endTime - this.slideStats.startTime)/1000);
             this.slideStats.lastSlide = this.slideIndex +1;
+            var fs = require('fs');
             fs.writeFileSync(this.slidesPath + 'stats.json', JSON.stringify(this.slideStats, null, 2));
         }
     });

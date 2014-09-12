@@ -14,6 +14,13 @@ atomic-slide {
     font-weight: bold;
 }
 
+.infobar .runtime {
+    text-align: center;
+    width: 100%;
+    top: 3px;
+    position: absolute;
+}
+
 .infobar .slides {
     left: 10px;
     top: 3px;

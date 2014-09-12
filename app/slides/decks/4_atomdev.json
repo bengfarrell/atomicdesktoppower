@@ -196,6 +196,23 @@
         }
       ],
       "number": 53
+    },
+    {
+      "background": "robinspeaking.png",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Beyond Simple File IO"
+        },
+        {
+          "region": "footer",
+          "html": "Did you forget that Node.js is great for serving web pages?"
+        }
+      ],
+      "number": 54
     }
   ]
 }

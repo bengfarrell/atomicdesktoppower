@@ -21,6 +21,8 @@
                 document.getElementById('preso').nextSlide();
             }  else if (String.fromCharCode(event.keyCode) == "C") {
                 document.getElementById('preso').reloadDeck();
+            } else if (String.fromCharCode(event.keyCode) == "T") {
+                document.getElementById('preso').toggleTimer();
             }
             if (typeof ipc != "undefined") {
                 ipc.send('keyboardEvent', { window: "main", keyCode: event.keyCode, key: String.fromCharCode(event.keyCode), action: 'keydown' });

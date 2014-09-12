@@ -20,6 +20,7 @@ Element providing solution to no problem in particular.
     <link rel="stylesheet" href="atomic-stats.css" />
 
     <content>
+        <div>Last runthrough duration {{lastDuration}}</div>
         <div id="chart"></div>
     </content>
 
@@ -50,9 +51,11 @@ Element providing solution to no problem in particular.
                 data[sld.number-1] = sld.duration ? sld.duration : 0;
             });
 
+            this.lastDuration = stats.runTime;
+
             //Width and height
             var w = 1000;
-            var h = 200;
+            var h = 450;
             var barPadding = 1;
             var svg = d3.select(this.$.chart)
                     .append("svg")
@@ -67,21 +70,35 @@ Element providing solution to no problem in particular.
                         return i * (w / data.length) + 50;
                     })
                     .attr("y", function(d) {
-                        return h - (d * 10) - 13;
+                        return h - (d * 2) -15;
                     })
                     .attr("width", w / data.length - barPadding)
                     .attr("height", function(d) {
-                        return d * 100;
+                        return d * 2;
                     })
                     .attr("fill", function(d) {
-                        return "rgb(0, 0, " + (Math.floor(d * 10)) + ")";
+                        return "rgb(0, 0, " + (Math.floor(d * 2)) + ")";
                     });
 
             svg.selectAll("text")
                     .data(data)
                     .enter()
                     .append("text")
-                    .text(function(d, i) { return i })
+                    .text(function(d, i) { return Math.floor(d) })
+                    .attr("text-anchor", "middle")
+                    .attr("x", function(d, i) {
+                        return i * (w / data.length) + (w / data.length - barPadding) / 2  + 50;
+                    })
+                    .attr("y", function(d, i) { return h - (d * 2) - 25 })
+                    .attr("font-family", "sans-serif")
+                    .attr("font-size", "11px")
+                    .attr("fill", "black");
+
+            svg.selectAll("text2")
+                    .data(data)
+                    .enter()
+                    .append("text")
+                    .text(function(d, i) { return i+1; })
                     .attr("text-anchor", "middle")
                     .attr("x", function(d, i) {
                         return i * (w / data.length) + (w / data.length - barPadding) / 2  + 50;
@@ -90,20 +107,6 @@ Element providing solution to no problem in particular.
                     .attr("font-family", "sans-serif")
                     .attr("font-size", "11px")
                     .attr("fill", "black");
-
-            svg.selectAll("text")
-                    .data(data)
-                    .enter()
-                    .append("text")
-                    .text(function(d, i) { return Math.ceil(d); })
-                    .attr("text-anchor", "middle")
-                    .attr("x", function(d, i) {
-                        return i * (w / data.length) + (w / data.length - barPadding) / 2  + 50;
-                    })
-                    .attr("y", function(d) { return h +5; })
-                    .attr("font-family", "sans-serif")
-                    .attr("font-size", "11px")
-                    .attr("fill", "white");
         }
 
     });

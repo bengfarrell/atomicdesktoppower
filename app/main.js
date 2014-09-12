@@ -72,7 +72,7 @@ app.on('ready', function() {
     ipc.on('keyboardEvent', function(event, arg) {
         switch(arg.key) {
             case "S":
-                secondaryWindow = new BrowserWindow({width: 800, height: 300});
+                secondaryWindow = new BrowserWindow({width: 800, height: 600});
                 secondaryWindow.loadUrl('file://' + __dirname + '/stats.html' );
                 secondaryWindow.on('closed', function() { secondaryWindow = null; });
                 break;
