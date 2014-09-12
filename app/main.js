@@ -2,19 +2,9 @@ var app = require('app');  // Module to control application life.
 var path = require('path');
 var BrowserWindow = require('browser-window');  // Module to create native browser window.
 var finalhandler = require('finalhandler');
-/*var express = require('express');
-var server = express();
-var serveIndex = require('serve-index');*/
 var http = require('http')
 var serveIndex = require('serve-index')
 var serveStatic = require('serve-static')
-
-// server our preso
-/*server.use('/', express.static(path.join(__dirname, '/')));
-server.use('/src', serveIndex(path.join(__dirname, '/'), {'icons': true}));
-server.listen(3000, function(){
-    console.log('Express server listening');
-});*/
 
 // Serve directory indexes for public/ftp folder (with icons)
 var index = serveIndex(path.join(__dirname, '/'), {'icons': true})
@@ -95,6 +85,7 @@ app.on('ready', function() {
                 break;
 
             case "X":
+                mainWindow.webContents.send('appClosed');
                 mainWindow.close();
                 if (secondaryWindow) { secondaryWindow.close(); }
                 break;
@@ -108,5 +99,7 @@ app.on('ready', function() {
     }
 
     // Emitted when the window is closed.
-    mainWindow.on('closed', function() { mainWindow = null; });
+    mainWindow.on('closed', function() {
+        mainWindow = null;
+    });
 });

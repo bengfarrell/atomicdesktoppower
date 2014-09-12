@@ -87,11 +87,15 @@ Element providing solution to no problem in particular.
          * @method ready
          */
         ready: function() {
+            var self = this;
             // if in a browser, just load the deck
             if (typeof require == "undefined") {
                 this.loadDeck();
                 return;
             }
+
+            var ipc = require('ipc');
+            ipc.on('appClosed', function() { self.deconstruct(); });
 
             // load our slide stats file
             var fs = require('fs');
@@ -108,6 +112,8 @@ Element providing solution to no problem in particular.
             } else {
                 startSldIndex = remote.getGlobal('config').slide;
             }
+
+            this.slideStats.startTime = new Date().getTime();
             this.loadSlide(startSldIndex -1);
 
             var os = require( 'os' );
@@ -299,8 +305,21 @@ Element providing solution to no problem in particular.
 
             // update generated JSON file for serving to a browser
             fs.writeFileSync(this.slidesPath + 'generatedslides.json', JSON.stringify( { currentSlide: this.slideIndex, baseImagePath: this.$.slideviewer.imgpath, slides: this.slides}, null, 2));
-         }
+         },
 
+        /**
+         * deconstruct
+         *
+         * @method recordSlide
+         * @param {int} old index of slide
+         * @param {int} new index of slide
+         */
+        deconstruct: function() {
+            this.slideStats.endTime = new Date().getTime();
+            this.slideStats.duration = Math.floor((this.slideStats.endTime - this.slideStats.startTime)/1000);
+            this.slideStats.lastSlide = this.slideIndex +1;
+            fs.writeFileSync(this.slidesPath + 'stats.json', JSON.stringify(this.slideStats, null, 2));
+        }
     });
 
   </script>
