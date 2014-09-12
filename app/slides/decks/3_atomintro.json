@@ -148,7 +148,7 @@
       "text": [
         {
           "region": "footer",
-          "html": "A simple environment for packaging HTML5 apps is great, but where's the Bat Computer?"
+          "html": "A simple environment for packaging HTML5 apps is great, <br />but where's the Bat Computer?"
         }
       ],
       "number": 35
