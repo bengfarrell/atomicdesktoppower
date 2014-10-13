@@ -5,7 +5,7 @@ var downloadatomshell = require('gulp-download-atom-shell');
 
 gulp.task('downloadatomshell', function(cb){
     downloadatomshell({
-        version: '0.13.3',
+        version: '0.16.2',
         outputDir: 'binaries'
     }, cb);
 });

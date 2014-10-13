@@ -16,11 +16,11 @@ Element providing solution to no problem in particular.
 <polymer-element name="atomic-slide" attributes="notitle">
 
   <template>
-
     <link rel="stylesheet" href="atomic-slide.css" />
 
     <content>
         <div id="background">
+            <div id="htmlinclude" class="htmlinclude"></div>
             <div id="center_img" class="imgregion"></div>
             <div id="center_full_img" class="imgregion_full"></div>
             <div id="header_txt" class="txtregion font-effect-3d"></div>
@@ -43,7 +43,6 @@ Element providing solution to no problem in particular.
          */
         txtRegions: [ 'header', 'footer', 'left', 'right' ],
 
-
         /**
          * image regions
          *
@@ -60,11 +59,52 @@ Element providing solution to no problem in particular.
          */
         imgpath: "",
 
+        /**
+         * html template base path
+         *
+         * @property htmltemplatepath
+         * @type string
+         */
+        htmltemplatepath: "",
+
         ready: function() {
         },
 
         /**
-        * The `task` method does no work at this time.
+         * getter for slide element
+         *
+         * @param {string} class name
+         * @return {array}
+         */
+        getHTMLIncludeElementsByClass: function(clazz) {
+            return this.$.htmlinclude.getElementsByClassName(clazz);
+        },
+
+        /**
+         * sets the html content of the slide via an HTML template
+         *
+         * @method set html template
+         * @param {String} template file
+         * @param {object} background properties
+         */
+        setHTML: function(template) {
+            this.loadResource(this.htmltemplatepath + '/' + template, this.onHTMLReceived);
+        },
+
+        /**
+         * on HTML callback for templates
+         *
+         * @method onHTMLRecieved
+         * @param {String} data
+         */
+        onHTMLReceived: function(data) {
+            this.$.htmlinclude.innerHTML = data;
+            this.executeScripts(this.$.htmlinclude);
+
+        },
+
+        /**
+        * sets the background image of the slide
         *
         * @method set background image
         * @param {String} img
@@ -112,6 +152,7 @@ Element providing solution to no problem in particular.
             this.clearBackgroundImage();
             this.clearText();
             this.clearImages();
+            this.clearHTMLTemplate();
          },
 
         /**
@@ -147,6 +188,15 @@ Element providing solution to no problem in particular.
          */
         clearBackgroundImage: function() {
             this.$.background.style.backgroundImage = null;
+        },
+
+        /**
+         * clear html template
+         *
+         * @method clear html template
+         */
+        clearHTMLTemplate: function() {
+            this.$.htmlinclude.innerHTML = "";
         },
 
         /**
@@ -197,6 +247,62 @@ Element providing solution to no problem in particular.
             }
 
             return base + "/" + img;
+        },
+
+        /**
+         * load a resource (whether through local filesystem or AJAX)
+         *
+         * @method loadResource
+         * @param {string} resource
+         * @param {function} callback
+         */
+        loadResource: function(resource, cb) {
+            var self = this;
+            var response;
+            var fs = require('fs');
+
+            if (fs) { // are we using node?
+                response = fs.readFileSync(resource);
+                cb.apply(self, [response]);
+                return;
+            }
+
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 ) {
+                    if(xmlhttp.status == 200) {
+                        response = xmlhttp.responseText;
+                    } else {
+                        response = '<span>Slide Content is missing, please check your path</span>';
+                    }
+                    cb.apply(self, [response]);
+                }
+            }
+            //xmlhttp.open("GET", "slides/htmlincludes/" + template, true);
+            xmlhttp.open("GET", resource, true);
+            xmlhttp.send();
+        },
+
+        /**
+         * execute scripts on loaded HTML
+         *
+         * @method executeScripts
+         * @param {object} node
+         */
+        executeScripts: function(node) {
+            if ( node.nodeName == "SCRIPT" ) {
+                var script = document.createElement("script");
+                script.text = node.innerHTML;
+                node.parentNode.replaceChild(script, node);
+            } else {
+                var i = 0;
+                var children = node.childNodes;
+                while ( i < children.length) {
+                    this.executeScripts( children[i] );
+                    i++;
+                }
+            }
+            return node;
         }
     });
 

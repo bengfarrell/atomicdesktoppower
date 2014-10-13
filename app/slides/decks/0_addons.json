@@ -1,0 +1,12 @@
+{
+    "slides": [
+        {
+            "htmlinclude": "helloworld.html",
+            "number": 1
+        },
+        {
+            "htmlinclude": "randomcoords.html",
+            "number": 1
+        }
+    ]
+}

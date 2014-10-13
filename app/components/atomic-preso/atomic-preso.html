@@ -90,6 +90,28 @@ Element providing solution to no problem in particular.
          */
         wlanip: "",
 
+
+        /**
+         * getter for slide element
+         *
+         * @return slide element
+         */
+        getSlideComponent: function(id) {
+            return this.$.slideviewer;
+        },
+
+        /**
+         * getter for slide element
+         *
+         * @param {string} class name
+         * @return {array}
+         */
+        getHTMLIncludeElementsByClass: function(clazz) {
+            return this.getSlideComponent().getHTMLIncludeElementsByClass(clazz);
+        },
+
+
+
         /**
          * ready
          *
@@ -192,6 +214,7 @@ Element providing solution to no problem in particular.
                         console.log(e.message);
                     }
                 });
+                this.$.slideviewer.htmltemplatepath = manifest.baseHTMLTemplatePath;
                 this.$.slideviewer.imgpath = manifest.baseImagePath;
             } else {
                 this.loadSlidesAjax(self);
@@ -285,6 +308,10 @@ Element providing solution to no problem in particular.
             this.$.slideviewer.clear();
             var sld = this.slides[index];
             var self = this;
+
+            if (sld.htmlinclude) {
+                self.$.slideviewer.setHTML(sld.htmlinclude);
+            }
 
             if (sld.text) {
                 sld.text.forEach( function(item) {

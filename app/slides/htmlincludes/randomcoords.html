@@ -1,0 +1,31 @@
+<script>
+    var rc = require('./node_modules/genericnodeaddon/lib/randomcoords.js');
+    var sq = document.getElementById('preso').getHTMLIncludeElementsByClass('square')[0];
+
+    function move2D() {
+        var coords = rc.getRandomCoords2D(500,500);
+        sq.style.left = coords.x + 'px';
+        sq.style.top = coords.y + 'px';
+    }
+
+    function move3D() {
+        var coords = rc.getRandomCoords3D(500,500, 200);
+        sq.style.left = coords.x + 'px';
+        sq.style.top = coords.y + 'px';
+        sq.style.width = coords.z + 'px';
+        sq.style.height = coords.z + 'px';
+    }
+</script>
+
+<style>
+    .square {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        position: absolute;
+    }
+</style>
+
+<button onclick="move2D()">move box in 2D</button>
+<button onclick="move3D()">move box in 3D</button>
+<div class="square"></div>

@@ -1,0 +1,8 @@
+<script>
+    function hello() {
+        var hw = require('./node_modules/genericnodeaddon/lib/helloworld.js');
+        alert("Calling Hello(): " + hw.hello());
+    }
+</script>
+
+<button onclick="hello()">Call Hello World</button>
