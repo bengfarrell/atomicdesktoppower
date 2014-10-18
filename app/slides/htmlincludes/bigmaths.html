@@ -1,0 +1,46 @@
+<script>
+    var bigmaths = require('./node_modules/genericnodeaddon/lib/bigmaths.js');
+    var jstime = document.getElementById('preso').getHTMLIncludeElementsByClass('jstime')[0];
+    var ctime = document.getElementById('preso').getHTMLIncludeElementsByClass('ctime')[0];
+
+    function countToABillionWithJS() {
+        var starttime = new Date().getTime();
+        bigmaths.countto_jsversion(1000000000, 1);
+        var endtime = new Date().getTime();
+        var dur = (endtime - starttime)/1000;
+        jstime.innerHTML = "Finished in " + dur + ' seconds';
+    }
+
+    function countToABillionWithC() {
+        var starttime = new Date().getTime();
+        bigmaths.countto(1000000000, 1);
+        var endtime = new Date().getTime();
+        var dur = (endtime - starttime)/1000;
+        ctime.innerHTML = "Finished in " + dur + ' seconds';
+    }
+</script>
+
+<style>
+    button {
+        height: 60px;
+        width: 150px;
+        font-size: 18px;
+    }
+
+    .container {
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+</style>
+
+<div class="container">
+    <div>
+        <button onclick="countToABillionWithJS()">Count to 1 billion with JS</button>
+        <span class="jstime">Waiting</span>
+    </div>
+
+    <div>
+        <button onclick="countToABillionWithC()">Count to 1 billion with C++</button>
+        <span class="ctime">Waiting</span>
+    </div>
+</div>

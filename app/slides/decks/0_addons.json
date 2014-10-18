@@ -1,12 +1,257 @@
 {
-    "slides": [
+  "slides": [
+    {
+      "text": [
         {
-            "htmlinclude": "helloworld.html",
-            "number": 1
+          "region": "header",
+          "html": "Bulked up Batman"
         },
         {
-            "htmlinclude": "randomcoords.html",
-            "number": 1
+          "region": "footer",
+          "html": "it's unnatural, but sometimes you need more power"
         }
-    ]
+      ],
+      "background": "bulkedup.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 1
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Let's tweak the Batcomputer"
+        },
+        {
+          "region": "footer",
+          "html": "get more power and speed by making C++ addons"
+        }
+      ],
+      "background": "batcomputer2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 2
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Node.js changes over time"
+        },
+        {
+          "region": "footer",
+          "html": "prior to Node 0.8 we used node-waf for compilation <br />Now node-gyp is the new hotness <br />Both are Python based build tools"
+        }
+      ],
+      "background": "batcomputer2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 3
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "It starts with binding.gyp"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "bindingdotgyp.jpg"
+        }
+      ],
+      "background": "batcomputer2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 4
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "npm install + binding.gyp"
+        },
+        {
+          "region": "footer",
+          "html": "makes lotsa stuff<br />on windows this means Visual Studio files<br />On OSX, this means XCode files"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "buildfolder.jpg"
+        }
+      ],
+      "background": "batcomputer2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 5
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "make your addon available"
+        }
+      ],
+      "images": [
+        {
+          "region": "center",
+          "image": "moduleexport.jpg"
+        }
+      ],
+      "background": "batcomputer2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 6
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "make your addon smarter than C++"
+        }
+      ],
+      "background": "moduleexport2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 7
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "So that's how we make the call..."
+        },
+        {
+          "region": "footer",
+          "html": "but what about writing the actual addon?"
+        }
+      ],
+      "background": "phone.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 8
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Well, it's slightly complicated..."
+        },
+        {
+          "region": "footer",
+          "html": "Node is changing"
+        }
+      ],
+      "background": "menkeepout.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 9
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Node 0.10 vs 0.11"
+        },
+        {
+          "region": "footer",
+          "html": "Atom Shell uses 0.11"
+        }
+      ],
+      "background": "oldvsnewnode.jpg",
+      "number": 10
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Native Abstractions for Node (NAN)"
+        }
+      ],
+      "background": "nan.jpg",
+      "number": 11
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "apm install"
+        }
+      ],
+      "background": "batcomputer2.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "number": 12
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Example: <button onclick='hello()'>Hello World</button>"
+        }
+      ],
+      "htmlinclude": "helloworld.html",
+      "background": "nan.jpg",
+      "number": 13
+    },
+    {
+      "text": [
+        {
+          "region": "header",
+          "html": "Example: <button onclick='move2D()'>move box in 2D</button><button onclick='move3D()'>move box in 3D</button>"
+        }
+      ],
+      "htmlinclude": "randomcoords.html",
+      "number": 14
+    },
+    {
+        "text": [
+            {
+                "region": "header",
+                "html": "Speed Check Example"
+            }
+        ],
+      "htmlinclude": "bigmaths.html",
+      "number": 15
+    },
+      {
+          "text": [
+              {
+                  "region": "header",
+                  "html": "We made a better Batmobile"
+              },
+              {
+                  "region": "footer",
+                  "html": "but so what?"
+              }
+          ],
+          "background": "superbatmobile.jpg",
+          "backgroundProperties": {
+              "bounds": "cover"
+          },
+          "number": 15
+      },
+      {
+          "text": [
+              {
+                  "region": "header",
+                  "html": "Because sometimes you need it!"
+              }
+          ],
+          "number": 15
+      }
+  ]
 }

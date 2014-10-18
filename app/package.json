@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "main.js",
   "dependencies": {
+      "nan": "",
       "genericnodeaddon": "git+https://github.com/bengfarrell/genericnodeaddon.git"
   }
 }
