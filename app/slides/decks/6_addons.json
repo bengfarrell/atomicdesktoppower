@@ -8,6 +8,7 @@
         },
         {
           "region": "footer",
+
           "html": "it's unnatural, but sometimes you need more power"
         }
       ],
@@ -251,6 +252,7 @@
                   "html": "Because sometimes you need it!"
               }
           ],
+          "background": "opencv_logo.png",
           "number": 15
       }
   ]

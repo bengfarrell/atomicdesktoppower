@@ -79,12 +79,33 @@
           "region": "header",
           "html": "Thanks!"
         },
+
+          {
+              "region": "left",
+              "html": "<ul><li>https://github.com/atom/atom-shell</li><li>https://www.npmjs.org/package/nan</li><li>https://github.com/peterbraden/node-opencv</li></ul>"
+          },
         {
           "region": "footer",
           "html": "ben@benfarrell.com <br /> https://github.com/bengfarrell/atomicdesktoppower"
         }
       ],
       "number": 84
-    }
+    },
+      {
+          "background": "gesignal.jpg",
+          "backgroundProperties": {
+              "bounds": "cover"
+          },
+          "text": [
+              {
+                  "region": "header",
+                  "html": "GE Software is hiring!"
+              },
+              {
+                  "region": "footer",
+                  "html": "http://gesoftware.com/careers"
+              }
+          ]
+      }
   ]
 }

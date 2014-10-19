@@ -76,6 +76,11 @@ app.on('ready', function() {
                 secondaryWindow.loadUrl('file://' + __dirname + '/stats.html' );
                 secondaryWindow.on('closed', function() { secondaryWindow = null; });
                 break;
+            case "O":
+                secondaryWindow = new BrowserWindow({width: 800, height: 600});
+                secondaryWindow.loadUrl('file://' + __dirname + '/opencvdemo.html' );
+                secondaryWindow.on('closed', function() { secondaryWindow = null; });
+                break;
             case "D":
                 if (arg.window == "main") {
                     mainWindow.openDevTools();

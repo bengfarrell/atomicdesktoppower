@@ -6,10 +6,13 @@
   "dependencies": {
     "finalhandler": "^0.2.0",
     "serve-index": "^1.2.1",
-    "serve-static": "^1.6.1"
+    "serve-static": "^1.6.1",
+    "genericnodeaddon": "git+https://github.com/bengfarrell/genericnodeaddon.git",
+    "opencv": "1.0.0"
   },
   "engine": "node >= 0.11.10",
   "devDependencies": {
+    "nan": "",
     "gulp": "^3.8.5",
     "gulp-download-atom-shell": "0.0.4",
     "gulp-shell": "^0.2.7"

@@ -4,6 +4,7 @@
   "main": "main.js",
   "dependencies": {
       "nan": "",
-      "genericnodeaddon": "git+https://github.com/bengfarrell/genericnodeaddon.git"
+      "genericnodeaddon": "git+https://github.com/bengfarrell/genericnodeaddon.git",
+      "opencv": "1.0.0"
   }
 }

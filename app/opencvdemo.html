@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>OpenCV Demo</title>
+        <script>
+            var cv = require('opencv');
+            var camera = new cv.VideoCapture(0);
+            setInterval(function() {
+                camera.read(function(err, im) {
+                    im.detectObject("node_modules/opencv/data/haarcascade_frontalface_alt.xml", {}, function(err, faces){
+
+                        for (var i=0;i<faces.length; i++){
+                            var x = faces[i];
+
+                            im.ellipse(x.x + x.width/2, x.y + x.height/2, x.width/2, x.height/2, [255, 255, 0], 5);
+                        }
+
+                        im.toBuffer( function(err, data) {
+                           document.getElementById('viz').style.backgroundImage="url(data:image/png;base64," + data.toString('base64') + ")";
+                        });
+                    });
+                });
+
+            }, 200);
+
+        </script>
+        <style>
+            #viz {
+                width: 100vh;
+                height: 100vh;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div id="viz"></div>
+    </body>
+</html>
