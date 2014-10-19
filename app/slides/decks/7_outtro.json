@@ -17,7 +17,7 @@
           "html": "Node Webkit"
         }
       ],
-      "number": 80
+      "number": 83
     },
     {
       "images": [
@@ -36,7 +36,7 @@
           "html": "Adobe Brackets"
         }
       ],
-      "number": 81
+      "number": 84
     },
     {
       "background": "batmancatwoman.png",
@@ -53,7 +53,7 @@
           "html": "We love multiple solutions even if they come from competitors"
         }
       ],
-      "number": 82
+      "number": 85
     },
     {
       "background": "happyanniversary.png",
@@ -67,7 +67,7 @@
           "html": "by making cool apps with Node.js + Webkit"
         }
       ],
-      "number": 83
+      "number": 86
     },
     {
       "background": "batsignal.jpg",
@@ -79,33 +79,33 @@
           "region": "header",
           "html": "Thanks!"
         },
-
-          {
-              "region": "left",
-              "html": "<ul><li>https://github.com/atom/atom-shell</li><li>https://www.npmjs.org/package/nan</li><li>https://github.com/peterbraden/node-opencv</li></ul>"
-          },
+        {
+          "region": "left",
+          "html": "<ul><li>Atom-Shell https://github.com/atom/atom-shell</li><li>NAN https://www.npmjs.org/package/nan</li><li>OpenCV https://github.com/peterbraden/node-opencv</li><li>OpenCV https://github.com/peterbraden/node-opencv</li><li>installing Node-OpenCV https://github.com/bengfarrell/installing-node-opencv</li><li>Node Example Add-ons https://github.com/bengfarrell/genericnodeaddon</li></ul>"
+        },
         {
           "region": "footer",
           "html": "ben@benfarrell.com <br /> https://github.com/bengfarrell/atomicdesktoppower"
         }
       ],
-      "number": 84
+      "number": 87
     },
-      {
-          "background": "gesignal.jpg",
-          "backgroundProperties": {
-              "bounds": "cover"
-          },
-          "text": [
-              {
-                  "region": "header",
-                  "html": "GE Software is hiring!"
-              },
-              {
-                  "region": "footer",
-                  "html": "http://gesoftware.com/careers"
-              }
-          ]
-      }
+    {
+      "background": "gesignal.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "GE Software is hiring!"
+        },
+        {
+          "region": "footer",
+          "html": "http://gesoftware.com/careers"
+        }
+      ],
+      "number": 88
+    }
   ]
 }

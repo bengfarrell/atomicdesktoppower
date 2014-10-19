@@ -2,7 +2,6 @@
     "baseImagePath": "./slides/images",
     "baseHTMLTemplatePath": "./app/slides/htmlincludes",
     "content": [
-        { "name": "test", "file": "decks/0_addons.json" },
         { "name": "intro", "file": "decks/1_intro.json" },
         { "name": "nodejs", "file": "decks/2_nodejs.json" },
         { "name": "atom shell intro", "file": "decks/3_atomintro.json" },

@@ -7,7 +7,7 @@
           "image": "atomequals.png"
         }
       ],
-      "number": 40
+      "number": 25
     },
     {
       "background": "atom-full.png",
@@ -20,7 +20,7 @@
           "html": "Github's Atom Editor"
         }
       ],
-      "number": 41
+      "number": 26
     },
     {
       "background": "underthehood.png",
@@ -37,7 +37,7 @@
           "html": "Atom is powered by Atom-Shell"
         }
       ],
-      "number": 42
+      "number": 27
     },
     {
       "text": [
@@ -56,7 +56,7 @@
           "image": "adam-west-batmobile-with-batgirl.jpg"
         }
       ],
-      "number": 43
+      "number": 28
     },
     {
       "background": "loadupwebkit.png",
@@ -69,7 +69,7 @@
           "html": "As always, load up Chromium with your preferred stack..."
         }
       ],
-      "number": 44
+      "number": 29
     },
     {
       "text": [
@@ -88,7 +88,7 @@
           "image": "browsers.png"
         }
       ],
-      "number": 45
+      "number": 30
     },
     {
       "background": "packageupyourhtml5.png",
@@ -101,7 +101,7 @@
           "html": "Package your own HTML5 application, and target your dev efforts for one platform"
         }
       ],
-      "number": 46
+      "number": 31
     },
     {
       "background": "villians.png",
@@ -115,7 +115,7 @@
           "html": "Batman has to deal with many supervillians, just like you do…."
         }
       ],
-      "number": 47
+      "number": 32
     },
     {
       "background": "villians.jpg",
@@ -128,7 +128,7 @@
           "html": "But when they gang up and you have to deal with them all..."
         }
       ],
-      "number": 48
+      "number": 33
     },
     {
       "background": "cliffhanger.png",
@@ -138,7 +138,7 @@
           "html": "<p>It’s usually at least a two-parter, with great peril</p><small>(just like your dev timeline)</small>"
         }
       ],
-      "number": 49
+      "number": 34
     },
     {
       "background": "nodejslogobig.png",
@@ -151,7 +151,7 @@
           "html": "A simple environment for packaging HTML5 apps is great, <br />but where's the Bat Computer?"
         }
       ],
-      "number": 50
+      "number": 35
     },
     {
       "background": "mobilecrime.jpg",
@@ -164,7 +164,7 @@
           "html": "just check the trunk!"
         }
       ],
-      "number": 51
+      "number": 36
     }
   ]
 }

@@ -15,7 +15,7 @@
           "html": "process.argv contains your incoming CLI args <br />  binaries\\atom.exe app arg1 arg2 arg3"
         }
       ],
-      "number": 70
+      "number": 55
     },
     {
       "background": "thinking.png",
@@ -32,7 +32,7 @@
           "html": "Use the debugger: mywindow.openDevTools();"
         }
       ],
-      "number": 71
+      "number": 56
     },
     {
       "background": "batmanwall.jpg",
@@ -49,7 +49,24 @@
           "html": "just create a new var: <br /> secondaryWindow = new BrowserWindow({width: 800, height: 300});"
         }
       ],
-      "number": 72
+      "number": 57
+    },
+    {
+      "background": "batmanwall.jpg",
+      "backgroundProperties": {
+        "bounds": "cover"
+      },
+      "text": [
+        {
+          "region": "header",
+          "html": "Window Options - new BrowserWindow(options)"
+        },
+        {
+          "region": "left",
+          "html": "<ul><li>x, y, width, height</li><li>fullscreen</li><li>always on top</li><li>web security</li><li>framed or frameless</li><li>skip taskbar</li></ul>"
+        }
+      ],
+      "number": 58
     },
     {
       "background": "batsprays.png",
@@ -66,7 +83,7 @@
           "html": "browser = Node.js side <br /> Web page = HTML5 side"
         }
       ],
-      "number": 73
+      "number": 59
     },
     {
       "background": "batbomb.gif",
@@ -83,7 +100,7 @@
           "html": "a ticking timebomb"
         }
       ],
-      "number": 74
+      "number": 60
     },
     {
       "background": "batbomb1.jpg",
@@ -100,7 +117,7 @@
           "html": "<ul><li>set in Node with global[&quot;myvar&quot;]</li><li>retrieve in webkit with remote.getGlobal(&quot;myvar&quot;)</li><li>primitives are copy by ref</li><li>functions can cause bad stuff to happen</li></ul>"
         }
       ],
-      "number": 75
+      "number": 61
     },
     {
       "background": "batbomb2.jpg",
@@ -117,7 +134,7 @@
           "html": "Require Module: var ipc = require('ipc'); <br /> Send: ipc.send('namedevent', arg) <br /> Recieve: ipc.on('namedevent', function(event, arg) {..."
         }
       ],
-      "number": 76
+      "number": 62
     },
     {
       "background": "batbomb3.jpg",
@@ -134,7 +151,7 @@
           "html": "Use &quot;window.windowContent&quot; to send <br /> Window.webContents.send('message', args)"
         }
       ],
-      "number": 77
+      "number": 63
     },
     {
       "background": "batbomb1.jpg",
@@ -151,7 +168,7 @@
           "html": "ipc.sendSync can lock up processes (and block my images!)"
         }
       ],
-      "number": 78
+      "number": 64
     },
     {
       "background": "jokerpresent.png",
@@ -165,7 +182,7 @@
           "html": "Drop your files into downloaded Atom-Shell"
         }
       ],
-      "number": 79
+      "number": 65
     }
   ]
 }
