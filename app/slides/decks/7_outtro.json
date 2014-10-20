@@ -81,7 +81,7 @@
         },
         {
           "region": "left",
-          "html": "<ul><li>Atom-Shell https://github.com/atom/atom-shell</li><li>NAN https://www.npmjs.org/package/nan</li><li>OpenCV https://github.com/peterbraden/node-opencv</li><li>OpenCV https://github.com/peterbraden/node-opencv</li><li>installing Node-OpenCV https://github.com/bengfarrell/installing-node-opencv</li><li>Node Example Add-ons https://github.com/bengfarrell/genericnodeaddon</li></ul>"
+          "html": "<ul><li>http://www.benfarrell.com</li><li>Atom-Shell https://github.com/atom/atom-shell</li><li>NAN https://www.npmjs.org/package/nan</li><li>OpenCV https://github.com/peterbraden/node-opencv</li><li>installing Node-OpenCV https://github.com/bengfarrell/installing-node-opencv</li><li>Node Example Add-ons https://github.com/bengfarrell/genericnodeaddon</li></ul>"
         },
         {
           "region": "footer",
