@@ -114,7 +114,7 @@
         },
         {
           "region": "left",
-          "html": "<ul><li>set in Node with global[&quot;myvar&quot;]</li><li>retrieve in webpage with remote.getGlobal(&quot;myvar&quot;)</li><li>primitives are copy by ref</li><li>functions can cause bad stuff to happen</li></ul>"
+          "html": "<ul><li>set in Node with global[&quot;myvar&quot;]</li><li>retrieve in webpage with remote.getGlobal(&quot;myvar&quot;)</li><li>functions can cause bad stuff to happen</li></ul>"
         }
       ],
       "number": 61
@@ -148,7 +148,7 @@
         },
         {
           "region": "footer",
-          "html": "Use &quot;window.windowContent&quot; to send <br /> Window.webContents.send('message', args)"
+          "html": "Use &quot;window.webContents&quot; to send <br /> Window.webContents.send('message', args)"
         }
       ],
       "number": 63
